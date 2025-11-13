@@ -1,21 +1,26 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home } from '../component/home/Home'; //home
-import { MobileLayout } from '../component/Layout/MobileLayout';
+import { useState } from 'react';
+import { Home } from "../components/Home/Home"; //home
+import { MobileLayout } from "../components/Layout/MobileLayout";
+import { Sign } from "../components/Sign/Sign";
+import { Welcome } from "../components/WelcomeScreen/Welcome";
+import { Search } from "../components/Search/Search";
+import './App.css'
 
-const Cards = () => <div>Карты (скоро)</div>
-const Transfers = () => <div>Переводы (скоро)</div> 
-const Profile = () => <div>Профиль (скоро)</div>
+const Message = () => <div>Переводы (скоро)</div>;
+const Seting = () => <div>Профиль (скоро)</div>;
 
 export default function AppRoute() {
-
   return (
     <BrowserRouter>
       <MobileLayout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cards" element={<Cards />} />
-          <Route path="/transfers" element={<Transfers />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/" element={<Welcome />} />
+          <Route path="/Sign" element={<Sign />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Search" element={<Search />} />
+          <Route path="/Maseage" element={<Message />} />
+          <Route path="/Seting" element={<Seting />} />
         </Routes>
       </MobileLayout>
     </BrowserRouter>

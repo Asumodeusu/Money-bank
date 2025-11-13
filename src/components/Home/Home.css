@@ -1,0 +1,86 @@
+.page__home {
+  min-height: 668px;
+  min-width: 375px;
+  background: #667eea;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.header__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.header__title {
+  font-size: 18px;
+  font-weight: 600;
+  color:  #e0e0e0;
+}
+
+.header_message {
+  width: 24px;
+  height: 24px;
+}
+
+/* Card Section */
+.content__card {
+  background: white;
+  border-radius: 24px 24px 0px 0px;
+  padding-top: 24px;
+}
+
+.card {
+  width: 100%;
+  height: 200px;
+}
+
+/* Menu Grid */
+.content__menu {
+  padding: 0 20px 20px;
+  flex-grow: 1;
+  background: white;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.menu-item:hover {
+  transform: translateY(-2px);
+}
+
+.menu-item img {
+  width: 32px;
+  height: 32px;
+}
+
+.menu-item span {
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
