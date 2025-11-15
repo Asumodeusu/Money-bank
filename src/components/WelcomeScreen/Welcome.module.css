@@ -1,5 +1,5 @@
-/* @media (width <= 768px) { */
-  .Welcome-page {
+ /* @media (width <= 500px) {  */
+  .welcomePage {
     background: #667eea;
     display: flex;
     flex-direction: column;
@@ -10,12 +10,12 @@
     min-width: 375px;
   }
 
-  .page__logo {
+  .pageLogo {
     width: 120px;
     height: 120px;
   }
 
-  .page__title {
+  .pageTitle {
     padding-top: 20px;
     font-weight: 400;
     font-size: 20px;
@@ -23,4 +23,3 @@
     text-align: center;
     color: white;
   }
-

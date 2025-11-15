@@ -1,5 +1,5 @@
 import "./Home.css";
-import { menuItems } from "../../data/HomeData/menuContent";
+import { homeItems } from "../../data/HomeData/menuContent";
 import { Footer } from "../FooterTab/FooterTab";
 
 //TODO колокольчик коунтер сдлеать
@@ -20,7 +20,7 @@ export const Home = () => {
 
         <section className="content__menu">
           <div className="menu">
-            {menuItems.map((item) => (
+            {homeItems.map((item) => (
               <button
                 key={item.id}
                 className="menu-item"

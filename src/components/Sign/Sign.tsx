@@ -48,7 +48,7 @@ export const Sign = () => {
           <input
             name="Number"
             className="sign-form__input"
-            type="text"
+            type="tel"
             placeholder="Number"
           />
         </label>

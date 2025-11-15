@@ -5,10 +5,9 @@ import { MobileLayout } from "../components/Layout/MobileLayout";
 import { Sign } from "../components/Sign/Sign";
 import { Welcome } from "../components/WelcomeScreen/Welcome";
 import { Search } from "../components/Search/Search";
+import { Message } from "../components/Message/Message";
+import { Setting } from "../components/SettingTab/Setting";
 import './App.css'
-
-const Message = () => <div>Переводы (скоро)</div>;
-const Seting = () => <div>Профиль (скоро)</div>;
 
 export default function AppRoute() {
   return (
@@ -19,8 +18,8 @@ export default function AppRoute() {
           <Route path="/Sign" element={<Sign />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Search" element={<Search />} />
-          <Route path="/Maseage" element={<Message />} />
-          <Route path="/Seting" element={<Seting />} />
+          <Route path="/Message" element={<Message />} />
+          <Route path="/Setting" element={<Setting />} />
         </Routes>
       </MobileLayout>
     </BrowserRouter>

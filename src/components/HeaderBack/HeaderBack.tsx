@@ -7,10 +7,10 @@ export const Header = () => {
   const location = useLocation();
 
   const handleBack = () => {
-    navigate(-1);
+    navigate('/home');
   };
 
-  const currentPath = location.pathname; // '/search', '/message', etc
+  const currentPath = location.pathname; // '/search', '/message', etc ПРОПСЫ???
   const currentPage = currentPath.slice(1); // убираем '/'
   const currentItem = backs.find((item) => item.id === currentPage);
 

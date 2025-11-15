@@ -5,7 +5,7 @@ interface MenuItem {
   path?: string;
 }
 
-export const menuItems: MenuItem[] = [
+export const homeItems: MenuItem[] = [
   {
     id: "account",
     icon: "/svg/icons/account.svg",

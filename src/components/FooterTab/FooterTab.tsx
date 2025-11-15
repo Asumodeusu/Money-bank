@@ -1,5 +1,4 @@
 import { tabs } from "../../data/footerTab";
-import { useState } from 'react';
 import  "./FooterTab.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -8,7 +7,10 @@ export const Footer = () => {
   const location = useLocation();
 
   const currentPath = location.pathname; // '/search', '/home', etc
-  const activeTab = currentPath.slice(1) || 'home'; // убираем '/' и если пусто - home!!!!! - не стоит вначале
+  const currentTab = currentPath.slice(1) || 'home'; // убираем '/' и если пусто - home!!!!! - не стоит вначале
+
+  // Проверяем существует ли такая вкладка, если нет - ставим 'home'
+  const activeTab = tabs.find(tab => tab.id === currentTab) ? currentTab : '';
 
   const handleTabChange = (tabId: string) => {
     navigate(`/${tabId}`);

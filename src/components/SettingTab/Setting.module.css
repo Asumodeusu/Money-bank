@@ -1,0 +1,70 @@
+.settingContent {
+  background: #667eea;
+  padding: 20px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 375px;
+
+}
+
+.settingImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  z-index: 2;
+}
+
+.imgName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  z-index: 2;
+}
+
+.contentUP {
+  background: white;
+  border-radius: 24px 24px 0px 0px;
+  width: 100%;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  margin-top: -80px;
+  min-height: 560px;
+} 
+
+.buttonContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.buttonContent:last-of-type {
+  border-bottom: none;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.buttonTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.buttonText {
+  font-size: 16px;
+  color: #666;
+}

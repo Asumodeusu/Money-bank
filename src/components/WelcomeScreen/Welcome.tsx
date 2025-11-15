@@ -1,5 +1,8 @@
-import "./Welcome.css";
+import style from './Welcome.module.css';
+// import "./Welcome.css";
+
 import { useNavigate } from 'react-router-dom';
+
 
 
 export const Welcome = () => {
@@ -7,11 +10,11 @@ export const Welcome = () => {
   
   return (
     <div
-      className="Welcome-page"
+      className={style.welcomePage}
       onClick={() => navigate("/Sign")} // ← ТАП ПО ВСЕМУ ЭКРАНУ
     >
-      <img className="page__logo" src="/svg/Logo.svg" alt="Logo" />
-      <h1 className="page__title">MONEY BANK</h1>
+      <img className={style.pageLogo} src="/svg/Logo.svg" alt="Logo" />
+      <h1 className={style.pageTitle}>MONEY BANK</h1>
     </div>
   );
 };
