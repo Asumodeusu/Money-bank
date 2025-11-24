@@ -1,16 +1,10 @@
-interface SearchItem {
-  id: string;
-  icon: string;
-  label: string;
-  path?: string;
-  text: string;
-}
+import { DataContent } from "../../utils/typeData";
 
-export const menuContent: SearchItem[] = [
+export const menuContent: DataContent[] = [
   {
     id: "account",
     icon: "/svg/pictureSearch/472.svg",
-    label: "Branch",
+    label: "Геолокация",
     text: "Search for branch",
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
@@ -29,7 +23,7 @@ export const menuContent: SearchItem[] = [
   {
     id: "Exchange",
     icon: "/svg/pictureSearch/490.svg",
-    label: "Exchange",
+    label: "Обмен валюты",
     text: "Exchange amount of money",
   }
 ];

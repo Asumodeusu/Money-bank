@@ -1,10 +1,7 @@
-interface HeaderType {
-  id: string;
-  label: string;
-}
+import { DataContent } from "../utils/typeData";
 
-export const backs: HeaderType[] = [
-  { id: 'search', label: 'Search'},
-  { id: 'message', label: 'Message' },
-  { id: 'setting', label: 'Setting' },
+export const backs: DataContent[] = [
+  { id: 'search', label: 'Поиск', path: '/Search' },
+  { id: 'message', label: 'СМС', path: '/Message'},
+  { id: 'setting', label: 'Настройки',  path: '/Setting'},
 ];

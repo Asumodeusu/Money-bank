@@ -1,5 +1,6 @@
-#root {
-  max-width: 430px;
+/* #root {
+  min-height: 668px;
+  min-width: 375px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -50,4 +51,4 @@ input {
 ul,
 ol {
   list-style: none;
-}
+} */

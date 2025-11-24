@@ -1,41 +1,28 @@
-interface MenuItem {
-  id: string;
-  icon?: string;
-  label: string;
-  path?: string;
-  text?: string;
-}
+import { DataContent } from "../../utils/typeData";
 
-
-export const settingContent: MenuItem[] = [
+export const settingContent: DataContent[] = [
   {
     id: "Password",
     icon: "/svg/Icon/38.svg",
     label: "Password",
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
-    {
+  {
     id: "ID",
     icon: "/svg/Icon/38.svg",
-    label: "Touch ID",
+    label: "Тема",
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
-    {
+  {
     id: "Languages",
     icon: "/svg/Icon/38.svg",
-    label: "Languages",
+    label: "Смена языка",
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
-    {
+  {
     id: "App",
     icon: "/svg/Icon/38.svg",
-    label: "App information",
+    label: "App информация",
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
-  //   {
-  //   id: "Customer",
-  //   label: "Customer care",
-  //   text: "77777186",
-  // },
-
-]
+];

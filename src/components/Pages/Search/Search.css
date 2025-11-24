@@ -1,0 +1,49 @@
+.all__content {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.content__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  text-align: left;
+  flex-shrink: 0; /* ← КНОПКИ НЕ СЖИМАЮТСЯ */
+}
+
+.button__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.button__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.button__text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.button__img {
+  width: 80px;
+  height: 60px;
+  margin-left: 16px;
+}

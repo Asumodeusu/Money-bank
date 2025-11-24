@@ -1,0 +1,66 @@
+/* src/index.css */
+@import "./variables.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* ← Центрируем по горизонтали */
+  align-items: center; /* ← Центрируем по вертикали */
+  background: grey; /* Фон вокруг мобильного экрана */
+}
+
+#root {
+  width: var(--mobile-width);
+  height: var(--mobile-height);
+  max-width: 90vw; /* Не больше 90% ширины окна */
+  max-height: 90vh; /* Не больше 90% высоты окна */
+  aspect-ratio: 375 / 667; /* Фиксируем соотношение сторон */
+  overflow: hidden;
+  position: relative;
+  background: blue;
+  border-radius: 24px;
+}
+
+/* Автоматическое масштабирование под разные экраны */
+.mobile-app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Все лейауты наследуют размеры */
+.mobile-layout,
+.mobile-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Адаптивные единицы измерения */
+:root {
+  --vw: calc(var(--mobile-width) / 100);
+  --vh: calc(var(--mobile-height) / 100);
+}
+
+/* Пример использования адаптивных единиц */
+.adaptive-component {
+  width: calc(80 * var(--vw)); /* 80% от ширины мобильного экрана */
+  height: calc(50 * var(--vh)); /* 50% от высоты мобильного экрана */
+  font-size: calc(4 * var(--vw)); /* Адаптивный размер текста */
+}
+
+/* Гарантируем что все страницы занимают всю высоту */
+.page-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

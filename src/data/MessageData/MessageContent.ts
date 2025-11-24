@@ -1,47 +1,40 @@
-interface MenuItem {
-  id: string;
-  icon: string;
-  label: string;
-  path?: string;
-  text?: string;
-  count: number;
-}
+import { DataContent } from "../../utils/typeData";
 
 
-export const massageContent: MenuItem[] = [
+export const massageContent: DataContent[] = [
   {
     id: "bank",
     icon: "/svg/message/5.svg",
-    label: "Bank of America",
+    label: "Банк СНГ",
     text: "Bank of America : 256486 is the au...",
-    count: 0,
+    count: 1,
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
     {
     id: "account",
     icon: "/svg/message/1.svg",
-    label: "Account",
+    label: "Аккаунт",
     count: 0,
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
     {
     id: "alert",
     icon: "/svg/message/2.svg",
-    label: "Alert",
+    label: "Поступления",
     count: 0,
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
     {
     id: "pay",
     icon: "/svg/message/3.svg",
-    label: "Paypal",
-    count: 5,
+    label: "Платежи",
+    count: 0,
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
     {
     id: "withdraw",
     icon: "/svg/message/4.svg",
-    label: "Withdraw",
+    label: "Чеки",
     count: 0,
     // path: '/account' ← ДОБАВЬ ПУТИ
   },

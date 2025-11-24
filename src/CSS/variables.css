@@ -1,0 +1,21 @@
+/* iPhone 12/13 (по умолчанию) */
+:root {
+  --mobile-width: 375px;
+  --mobile-height: 667px;
+}
+
+/* Для больших телефонов */
+@media (min-height: 800px) {
+  :root {
+    --mobile-width: 390px;
+    --mobile-height: 844px; /* iPhone 12/13 Pro */
+  }
+}
+
+/* Для маленьких телефонов */
+@media (max-height: 600px) {
+  :root {
+    --mobile-width: 320px;
+    --mobile-height: 568px; /* iPhone SE */
+  }
+}

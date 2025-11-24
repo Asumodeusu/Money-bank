@@ -1,0 +1,28 @@
+.allHeader {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0px 15px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerBackButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 15px 0px 0px 20px;
+  margin: 0;
+  display: flex;
+}
+
+.headerBackHome {
+  width: 20px;
+}
+
+.headerBackText {
+  padding-left: 15px;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}

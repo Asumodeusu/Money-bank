@@ -1,0 +1,59 @@
+.massageContent {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.buttonContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.buttonLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.buttonImg {
+  width: 40px;
+  height: 40px;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buttonTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.buttonText {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.buttonCount {
+  font-size: 14px;
+  color: #999;
+}
