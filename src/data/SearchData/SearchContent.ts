@@ -1,4 +1,4 @@
-import { DataContent } from "../../utils/typeData";
+import { DataContent } from "../../types/types";
 
 export const menuContent: DataContent[] = [
   {
@@ -9,15 +9,9 @@ export const menuContent: DataContent[] = [
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
   {
-    id: "Interest",
-    icon: "/svg/pictureSearch/478.svg",
-    label: "Interest rate",
-    text: "Search for interest rate",
-  },
-  {
     id: "ExchangeRate",
     icon: "/svg/pictureSearch/477.svg",
-    label: "Exchange rate",
+    label: "Валюта",
     text: "Search for exchange rate",
   },
   {

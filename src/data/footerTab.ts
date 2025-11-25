@@ -1,8 +1,24 @@
-import { DataContent } from "../utils/typeData";
+import { DataContent } from "../types/types";
+import { ROUTES } from "../constants/routes";
 
 export const tabs: DataContent[] = [
-  { id: 'home', icon: "/svg/Icon/45.svg", label: 'Главная', path: '/Home'},
-  { id: 'search', icon: "/svg/Icon/44.svg", label: 'Поиск', path: '/Search' },
-  { id: 'message', icon: "/svg/Icon/42.svg", label: 'СМС', path: '/Message' },
-  { id: 'setting', icon: "/svg/Icon/43.svg", label: 'Настройки', path: '/Setting'},
+  { id: "home", icon: "/svg/Icon/45.svg", label: "Главная", path: ROUTES.HOME },
+  {
+    id: "search",
+    icon: "/svg/Icon/44.svg",
+    label: "Поиск",
+    path: ROUTES.SEARCH,
+  },
+  {
+    id: "message",
+    icon: "/svg/Icon/42.svg",
+    label: "СМС",
+    path: ROUTES.MESSAGE,
+  },
+  {
+    id: "setting",
+    icon: "/svg/Icon/43.svg",
+    label: "Настройки",
+    path: ROUTES.SETTING,
+  },
 ];

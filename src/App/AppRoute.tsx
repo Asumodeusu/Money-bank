@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "../components/Pages/Home/Home";
+
+import { ROUTES } from "../constants/routes";
 
 import { MainLayout } from "../Layouts/MainLayout";
-
+import { Home } from "../components/Pages/Home/Home";
 import { Sign } from "../components/Pages/Sign/Sign";
 import { Welcome } from "../components/Pages/WelcomeScreen/Welcome";
 import { Search } from "../components/Pages/Search/Search";
@@ -14,11 +15,11 @@ export default function AppRoute() {
     <BrowserRouter>
       <div className="mobile-screen">
         <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/Sign" element={<Sign />} />
-          <Route path="/Home" element={<Home />} />
+          <Route path={ROUTES.WELCOME} element={<Welcome />} />
+          <Route path={ROUTES.SIGN} element={<Sign />} />
+          <Route path={ROUTES.HOME} element={<Home />} />
           <Route
-            path="/Search"
+            path={ROUTES.SEARCH}
             element={
               <MainLayout>
                 <Search />
@@ -26,7 +27,7 @@ export default function AppRoute() {
             }
           />
           <Route
-            path="/Message"
+            path={ROUTES.MESSAGE}
             element={
               <MainLayout>
                 <Message />
@@ -34,7 +35,7 @@ export default function AppRoute() {
             }
           />
           <Route
-            path="/Setting"
+            path={ROUTES.SETTING}
             element={
               <MainLayout>
                 <Setting />

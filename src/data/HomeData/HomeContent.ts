@@ -1,4 +1,4 @@
-import { DataContent } from "../../utils/typeData";
+import { DataContent } from "../../types/types";
 
 export const homeItems: DataContent[] = [
   {
