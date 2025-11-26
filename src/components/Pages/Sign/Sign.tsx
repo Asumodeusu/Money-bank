@@ -1,13 +1,12 @@
 import "./Sign.css";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../../store/hooks";
-import { setHeaderPreset } from '../../../store/slices/headerSlice';
+import { setHeaderPreset } from "../../../store/slices/headerSlice";
 import { useEffect } from "react";
-import { Header } from "../../UI/HeaderBack/HeaderBack";
 
 export const Sign = () => {
   const navigate = useNavigate();
-
+  // переход на главную стр
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     navigate("/Home");
@@ -16,30 +15,17 @@ export const Sign = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    // Устанавливаем синий хедер для страницы настроек
-    dispatch(setHeaderPreset('settings'));
-    
+    // меняем стили пресета сетинг
+    dispatch(setHeaderPreset("settings"));
     return () => {
       // При уходе со страницы - возвращаем дефолтный хедер
-      dispatch(setHeaderPreset('default'));
+      dispatch(setHeaderPreset("default"));
     };
   }, [dispatch]);
 
   return (
     <div className="page-container">
       <div className="sign-page">
-        < Header />
-        {/* <header className="sign__header">
-          <button className="sign__back-button" onClick={handleBack}>
-            <img
-              className="sign__back-welcome"
-              src="/svg/Icon/39.svg"
-              alt="назад"
-            />
-            <span className="sign__up">Sign up</span>
-          </button>
-        </header> */}
-
         <form className="sign-form" onSubmit={handleSubmit}>
           <h1 className="sign-form__title">Welcome to us,</h1>
           <p className="sign-form__subtitle">Hello there, create New account</p>

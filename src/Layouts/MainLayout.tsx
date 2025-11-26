@@ -1,17 +1,28 @@
+import styles from "./Layout.module.css";
+import { useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom"; // для добавления пейджев
 import { Footer } from "../components/UI/FooterTab/FooterTab";
 import { Header } from "../components/UI/HeaderBack/HeaderBack";
-import styles from "./Layout.module.css";
+import { LAYOUT_CONFIG } from "../constants/layouts";
 
-import { ReactNode } from "react";
+export const MainLayout = () => {
+  const location = useLocation();
+  const config = LAYOUT_CONFIG[
+    location.pathname as keyof typeof LAYOUT_CONFIG
+  ] || {
+    showHeader: true, // Дефолтные значения
+    showFooter: true,
+  }; // дает возможность переиспользовать UI компоненты при отресовке для разных состояний пейдж
 
-export const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className={styles.mobileLayout}>  {/* ← Наследует размеры */}
-      <Header/>
+    <div className={styles.mobileLayout}>
+      {" "}
+      {/* ← Наследует размеры */}
+      {config?.showHeader && <Header />}
       <main className={styles.layoutContent}>
-        {children}
+        <Outlet />
       </main>
-      <Footer />
+      {config?.showFooter && <Footer />}
     </div>
   );
 };

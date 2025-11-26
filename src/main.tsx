@@ -6,7 +6,10 @@ import App from "./App/App.tsx";
 import "./CSS/index.css";
 
 const rootElement = document.getElementById("root");
-if (!rootElement) throw new Error("Root element not found");
+if (!rootElement)
+  throw new Error(
+    "Root element not found"
+  ); /* если нет элемента выдает ошибку */
 
 createRoot(rootElement).render(
   <StrictMode>

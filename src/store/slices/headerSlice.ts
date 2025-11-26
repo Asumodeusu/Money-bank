@@ -3,11 +3,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // Интерфейс описывает структуру конфигурации хедера
 // Какие настройки можно менять для хедера
 export interface HeaderConfig {
-  preset: string;
-  background: string; // Цвет фона (hex, rgb, или 'transparent')
-  showText: boolean; // Показывать ли текст
-  showBackButton: boolean; // Показывать ли кнопку "назад"
-  borderBottom?: boolean; // Показывать ли нижнюю границу (опционально)
+  preset: string; // для поиска по пресету
+  background: string;
+  showText: boolean;
+  showBackButton: boolean;
+  borderBottom?: boolean;
 }
 
 // Создаем предустановленные конфигурации для разных страниц
@@ -15,41 +15,41 @@ export interface HeaderConfig {
 export const headerPresets: Record<string, HeaderConfig> = {
   // Стандартный хедер
   default: {
-    preset: 'default',
-    background: "white", // Белый фон
-    showText: true, // Показывать текст
-    showBackButton: true, // Показывать кнопку назад
-    borderBottom: true, // Показывать нижнюю границу
+    preset: "default",
+    background: "white",
+    showText: true,
+    showBackButton: true,
+    borderBottom: true,
   },
-  // Хедер для страницы настроек - синий с белым текстом
+  // Хедер для страниц
   settings: {
-    preset: 'settings',
+    preset: "settings",
     background: "#667eea",
     showText: true,
     showBackButton: true,
     borderBottom: false,
   },
   confirm: {
-    preset: 'confirm',
+    preset: "confirm",
     background: "white",
     showText: false,
     showBackButton: false,
     borderBottom: false,
   },
   succes: {
-    preset: 'succes',
+    preset: "succes",
     background: "white",
     showText: false,
     showBackButton: true,
     borderBottom: false,
   },
   card: {
-    preset: 'card',
+    preset: "card",
     background: "white",
     showText: true,
     showBackButton: true,
     borderBottom: false,
-  }
+  },
 };
 
 // Интерфейс описывает полное состояние хедера в Redux

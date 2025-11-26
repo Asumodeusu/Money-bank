@@ -8,16 +8,17 @@ export const Header = () => {
   const location = useLocation();
 
   // Получаем состояние хедера из Redux store
-  // useAppSelector - это наш типизированный хук useSelector
+  // useAppSelector - типизированный хук useSelector
   const headerState = useAppSelector((state) => state.header);
 
   const handleBack = () => {
     navigate(-1);
   };
 
+  // для обертки спана с разными названиями - определяет текст с помощью перехода по определнным сылкам
   const currentItem = backs.find((item) => item.path === location.pathname);
 
-  // Создаем классы: базовый + пресет из Redux
+  //  Комбинируем базовый класс с пресетом из Redux
   const headerClass = `${style.allHeader} ${style[headerState.config.preset]}`;
 
   return (

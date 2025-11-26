@@ -1,3 +1,4 @@
+// интерфейс для компонентов DATA
 export interface DataContent {
   id: string;
   icon?: string;

@@ -1,6 +1,5 @@
 import "./Home.css";
 import { homeItems } from "../../../data/HomeData/HomeContent";
-import { Footer } from "../../UI/FooterTab/FooterTab";
 
 //TODO колокольчик коунтер сдлеать
 
@@ -36,8 +35,6 @@ export const Home = () => {
             ))}
           </div>
         </section>
-
-        <Footer />
       </div>
     </div>
   );

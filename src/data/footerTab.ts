@@ -12,7 +12,7 @@ export const tabs: DataContent[] = [
   {
     id: "message",
     icon: "/svg/Icon/42.svg",
-    label: "СМС",
+    label: "Сообщения",
     path: ROUTES.MESSAGE,
   },
   {

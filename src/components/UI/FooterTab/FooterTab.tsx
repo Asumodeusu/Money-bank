@@ -5,14 +5,14 @@ import { useNavigate, useLocation } from "react-router-dom";
 export const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
+  // Определяем активную вкладку по текущему пути
   const activeTab =
     tabs.find((tab) => tab.path === location.pathname)?.id || "";
 
   const handleTabChange = (tabId: string) => {
     const tab = tabs.find((t) => t.id === tabId);
-    if (tab && tab.path) {
-      // проверка на существование path
+    // Если у вкладки есть путь - выполняем навигацию
+    if (tab?.path) {
       navigate(tab.path);
     }
   };
