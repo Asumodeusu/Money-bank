@@ -2,9 +2,12 @@ import { settingContent } from "../../../data/SettingData/SettingContent";
 import { useEffect } from "react";
 import { useAppDispatch } from "../../../store/hooks";
 import { setHeaderPreset } from "../../../store/slices/headerSlice";
+import { useNavigate } from "react-router-dom";
 import style from "./Setting.module.css";
+import { DataContent } from "../../../types/types";
 
 export const Setting = () => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -14,6 +17,12 @@ export const Setting = () => {
     };
   }, [dispatch]);
 
+  const handlePathClick = (item: DataContent) => {
+    if (item.path) {
+    navigate(item.path)
+    }
+  }
+
   return (
     <div className="page-container">
       <main className={style.settingContent}>
@@ -21,7 +30,7 @@ export const Setting = () => {
         <strong className={style.imgName}>Push Puttichai</strong>
         <section className={style.contentUP}>
           {settingContent.map((item) => (
-            <button key={item.id} className={style.buttonContent}>
+            <button key={item.id} className={style.buttonContent} onClick={() => handlePathClick(item)}>
               <strong className={style.buttonTitle}>{item.label}</strong>
               <img src={item.icon} className={style.buttonImg} alt={item.id} />
             </button>

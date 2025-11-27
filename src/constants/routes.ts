@@ -4,6 +4,7 @@ export const ROUTES = {
   HOME: "/Home",
   SEARCH: "/Search",
   SEARCH_MAP: "/Search/map",
+  SEARCH_CURRENCY: "/Search/currency",
   MESSAGE: "/Message",
   SETTING: "/Setting",
 } as const; // константа с сылками юрл - для автоматизации

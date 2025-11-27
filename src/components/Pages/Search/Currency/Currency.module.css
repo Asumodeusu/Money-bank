@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contentTitle {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  color: grey;
+}
+
+.currency {
+  display: flex;
+}
+
+.currencyButton {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+}

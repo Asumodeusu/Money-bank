@@ -14,6 +14,7 @@ export const menuContent: DataContent[] = [
     icon: "/svg/pictureSearch/477.svg",
     label: "Валюта",
     text: "Курс валют",
+    path: ROUTES.SEARCH_CURRENCY
   },
   {
     id: "Exchange",

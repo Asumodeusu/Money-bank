@@ -1,11 +1,9 @@
-import "../Search.css";
+import { SimpleMap } from "../../../Map/Map";
 
 export const Map = () => {
-
   return (
     <div className="page-container">
-      <main className="all__content">
-      </main>
+      <SimpleMap center={[57.147633, 65.57857]} zoom={18} />
     </div>
   );
 };

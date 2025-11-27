@@ -1,4 +1,5 @@
 import { DataContent } from "../../types/types";
+import { ROUTES } from "../../constants/routes";
 
 export const settingContent: DataContent[] = [
   {
@@ -25,4 +26,10 @@ export const settingContent: DataContent[] = [
     label: "App информация",
     // path: '/account' ← ДОБАВЬ ПУТИ
   },
+    {
+    id: "Выход",
+    icon: "/svg/Icon/38.svg",
+    label: "Выход",
+    path: ROUTES.WELCOME
+  }
 ];

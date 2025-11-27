@@ -8,7 +8,8 @@ import {
   Search,
   Setting,
   Message,
-  Map
+  Map,
+  Currency,
 } from "../components/Pages";
 import { MainLayout } from "../Layouts/MainLayout";
 
@@ -26,6 +27,7 @@ export default function AppRoute() {
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.SEARCH} element={<Search />} />
             <Route path={ROUTES.SEARCH_MAP} element={<Map />} />
+            <Route path={ROUTES.SEARCH_CURRENCY} element={<Currency />} />
             <Route path={ROUTES.MESSAGE} element={<Message />} />
             <Route path={ROUTES.SETTING} element={<Setting />} />
           </Route>

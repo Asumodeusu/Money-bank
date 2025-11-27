@@ -26,7 +26,7 @@ body {
   aspect-ratio: 375 / 667; /* Фиксируем соотношение сторон */
   overflow: hidden;
   position: relative;
-  background: blue;
+  background: white;
   border-radius: 24px;
 }
 
