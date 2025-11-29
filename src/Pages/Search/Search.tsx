@@ -1,7 +1,7 @@
-import "./Search.css";
-import { menuContent } from "../../../data/SearchData/SearchContent";
+import style from "./Search.module.css";
+import { menuContent } from "../../data/SearchData/SearchContent";
 import { useNavigate } from "react-router-dom";
-import { DataContent } from "../../../types/types";
+import { DataContent } from "../../types/types";
 
 export const Search = () => {
   const navigate = useNavigate();
@@ -14,18 +14,18 @@ export const Search = () => {
 
   return (
     <div className="page-container">
-      <main className="all__content">
+      <main className={style.allContent}>
         {menuContent.map((item) => (
           <button
             key={item.id}
-            className="content__button"
+            className={style.contentButton}
             onClick={() => handleItemClick(item)}
           >
-            <div className="button__content">
-              <strong className="button__title">{item.label}</strong>
-              <span className="button__text">{item.text}</span>
+            <div className={style.buttonContent}>
+              <strong className={style.buttonTitle}>{item.label}</strong>
+              <span className={style.buttonText}>{item.text}</span>
             </div>
-            <img className="button__img" src={item.icon} alt={item.id} />
+            <img className={style.buttonImg} src={item.icon} alt={item.id} />
           </button>
         ))}
       </main>

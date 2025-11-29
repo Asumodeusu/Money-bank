@@ -1,4 +1,4 @@
-import { SimpleMap } from "../../../Map/Map";
+import { SimpleMap } from "../../../components/Map/Map";
 
 export const Map = () => {
   return (

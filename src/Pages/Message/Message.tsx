@@ -1,4 +1,4 @@
-import { massageContent } from "../../../data/MessageData/MessageContent";
+import { massageContent } from "../../data/MessageData/MessageContent";
 import style from "./Message.module.css";
 
 export const Message = () => {

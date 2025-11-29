@@ -1,0 +1,73 @@
+import style from "./Sign.module.css";
+import { useNavigate, Link } from "react-router-dom";
+import { useHeaderPreset } from "../../hooks";
+import { ROUTES } from "../../constants/routes";
+import { useSignForm } from "../../hooks/useSignForm/useSignForm";
+
+export const SignIn = () => {
+  const navigate = useNavigate();
+  useHeaderPreset("settings"); // хук хедера с разными пресетами
+  const { fields, updateField, isSubmitActive, submitForm } =
+    useSignForm("signin");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (submitForm()) {
+      navigate("/Home", {
+        state: { userName: fields.user }, // сохранение имени и передача его в главную стр
+      });
+    }
+  };
+  return (
+    <div className="page-container">
+      <div className={style.signPage}>
+        <form className={style.signForm} onSubmit={handleSubmit}>
+          <h1 className={style.signFormTitle}>С возвращением,</h1>
+          <p className={style.signFormSubtitle}>выполните авторизацию</p>
+          <img
+            className={style.signFormImage}
+            src="/svg/zamok.svg"
+            alt="Decoration"
+          />
+
+          <label className={style.signFormField}>
+            <input
+              name="user"
+              className={style.signFormInput}
+              type="text"
+              placeholder="User"
+              value={fields.user}
+              onChange={(e) => updateField("user", e.target.value)}
+            />
+          </label>
+          <label className={style.signFormField}>
+            <input
+              name="Password"
+              className={style.signFormInput}
+              type="password"
+              placeholder="Password"
+              value={fields.password}
+              onChange={(e) => updateField("password", e.target.value)}
+            />
+          </label>
+
+          <button
+            type="submit"
+            className={`${style.signFormButton} ${
+              !isSubmitActive ? style.signFormButtonOff : ""
+            }`}
+          >
+            Войти
+          </button>
+
+          <p className={style.signFormFooterText}>
+            У вас нет профиля?
+            <Link to={ROUTES.SIGN} className={style.signFormLink}>
+              Зарегистрируйтесь
+            </Link>
+          </p>
+        </form>
+      </div>
+    </div>
+  );
+};

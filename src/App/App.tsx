@@ -1,12 +1,9 @@
-import  AppRoute  from './AppRoute'
-import './App.css'
+import AppRoute from "./AppRoute";
 
 export default function App() {
-
   return (
-      <div className="mobile-app">
-        <AppRoute />
-      </div>
-  )
+    <div className="mobile-app">
+      <AppRoute />
+    </div>
+  );
 }
-

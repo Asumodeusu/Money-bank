@@ -1,21 +1,12 @@
-import { settingContent } from "../../../data/SettingData/SettingContent";
-import { useEffect } from "react";
-import { useAppDispatch } from "../../../store/hooks";
-import { setHeaderPreset } from "../../../store/slices/headerSlice";
+import { settingContent } from "../../data/SettingData/SettingContent";
 import { useNavigate } from "react-router-dom";
 import style from "./Setting.module.css";
-import { DataContent } from "../../../types/types";
+import { DataContent } from "../../types/types";
+import { useHeaderPreset } from "../../hooks";
 
 export const Setting = () => {
   const navigate = useNavigate();
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(setHeaderPreset("settings"));
-    return () => {
-      dispatch(setHeaderPreset("default"));
-    };
-  }, [dispatch]);
+  useHeaderPreset("settings")
 
   const handlePathClick = (item: DataContent) => {
     if (item.path) {

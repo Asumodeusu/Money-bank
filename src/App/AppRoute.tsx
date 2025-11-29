@@ -10,7 +10,8 @@ import {
   Message,
   Map,
   Currency,
-} from "../components/Pages";
+  SignIn,
+} from "../Pages";
 import { MainLayout } from "../Layouts/MainLayout";
 
 // Ленивая загрузка тяжелых компонентов, чтобы не перегружать устройства и это хорошая практика
@@ -24,6 +25,7 @@ export default function AppRoute() {
           <Route element={<MainLayout />}>
             <Route path={ROUTES.WELCOME} element={<Welcome />} />
             <Route path={ROUTES.SIGN} element={<Sign />} />
+            <Route path={ROUTES.SIGN_IN} element={<SignIn />} />
             <Route path={ROUTES.HOME} element={<Home />} />
             <Route path={ROUTES.SEARCH} element={<Search />} />
             <Route path={ROUTES.SEARCH_MAP} element={<Map />} />

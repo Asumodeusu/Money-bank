@@ -5,4 +5,5 @@ export * from "./Search/Map/Map"
 export * from "./Search/Currency/Currency"
 export * from "./SettingTab/Setting";
 export * from "./Sign/Sign";
+export * from "./Sign/SignIn"
 export * from "./WelcomeScreen/Welcome";
