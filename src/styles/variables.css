@@ -5,17 +5,14 @@
 }
 
 /* Для больших телефонов */
-@media (min-height: 800px) {
+@media (max-width: 768px), (max-height: 768px) {
   :root {
-    --mobile-width: 390px;
-    --mobile-height: 844px; /* iPhone 12/13 Pro */
+    --mobile-width: 100vw;
+    --mobile-height: 100vh;
   }
 }
 
-/* Для маленьких телефонов */
-@media (max-height: 600px) {
-  :root {
-    --mobile-width: 320px;
-    --mobile-height: 568px; /* iPhone SE */
-  }
+:root {
+  --vw: calc(var(--mobile-width) / 100);
+  --vh: calc(var(--mobile-height) / 100);
 }

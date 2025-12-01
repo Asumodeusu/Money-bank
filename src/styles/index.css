@@ -1,4 +1,3 @@
-/* src/index.css */
 @import "./variables.css";
 
 * {
@@ -19,8 +18,8 @@ body {
 }
 
 #root {
-  width: var(--mobile-width);
-  height: var(--mobile-height);
+  width: var(--mobile-width);        /* ← Будет 375px на ПК, 100vw на телефоне */
+  height: var(--mobile-height);      /* ← Будет 667px на ПК, 100vh на телефоне */
   max-width: 90vw; /* Не больше 90% ширины окна */
   max-height: 90vh; /* Не больше 90% высоты окна */
   aspect-ratio: 375 / 667; /* Фиксируем соотношение сторон */
@@ -28,6 +27,21 @@ body {
   position: relative;
   background: white;
   border-radius: 24px;
+}
+
+/* ДОБАВЛЯЕМ только этот блок для телефонов */
+@media (max-width: 768px), (max-height: 768px) {
+  html, body {
+    background: white;  /* ← Убираем серый фон на телефоне */
+    display: block;     /* ← Отключаем flex центрирование */
+  }
+  
+  #root {
+    border-radius: 0;   /* ← Убираем скругления на телефоне */
+    max-width: 100vw;   /* ← Разрешаем 100% ширины */
+    max-height: 100vh;  /* ← Разрешаем 100% высоты */
+    aspect-ratio: auto; /* ← Отключаем фиксированное соотношение */
+  }
 }
 
 /* Автоматическое масштабирование под разные экраны */
@@ -43,19 +57,6 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-}
-
-/* Адаптивные единицы измерения */
-:root {
-  --vw: calc(var(--mobile-width) / 100);
-  --vh: calc(var(--mobile-height) / 100);
-}
-
-/* Пример использования адаптивных единиц */
-.adaptive-component {
-  width: calc(80 * var(--vw)); /* 80% от ширины мобильного экрана */
-  height: calc(50 * var(--vh)); /* 50% от высоты мобильного экрана */
-  font-size: calc(4 * var(--vw)); /* Адаптивный размер текста */
 }
 
 /* Гарантируем что все страницы занимают всю высоту */
