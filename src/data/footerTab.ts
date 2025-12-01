@@ -2,7 +2,10 @@ import { DataContent } from "../types/types";
 import { ROUTES } from "../constants/routes";
 
 export const tabs: DataContent[] = [
-  { id: "home", icon: "/svg/Icon/45.svg", label: "Главная", path: ROUTES.HOME },
+  { id: "home", 
+    icon: "/svg/Icon/45.svg", 
+    label: "Главная", 
+    path: ROUTES.HOME },
   {
     id: "search",
     icon: "/svg/Icon/44.svg",

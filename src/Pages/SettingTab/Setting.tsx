@@ -18,7 +18,7 @@ export const Setting = () => {
     <div className="page-container">
       <main className={style.settingContent}>
         <img src="./svg/Avatar.svg" alt="avatar" className={style.settingImg} />
-        <strong className={style.imgName}>Push Puttichai</strong>
+        <strong className={style.imgName}>Настройки</strong>
         <section className={style.contentUP}>
           {settingContent.map((item) => (
             <button key={item.id} className={style.buttonContent} onClick={() => handlePathClick(item)}>

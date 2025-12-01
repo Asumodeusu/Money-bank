@@ -6,21 +6,37 @@
 }
 
 .contentTitle {
-  display: flex;
-  font-size: 20px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-weight: bold;
   color: grey;
-}
-
-.currency {
-  display: flex;
+  font-size: 20px;
+  text-align: center;
 }
 
 .currencyButton {
-  display: flex;
-  font-size: 20px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 18px;
   background: transparent;
   border: none;
   border-bottom: 1px solid grey;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* Добавляем классы для выравнивания под шапками */
+.codeColumn {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.buyColumn {
+  text-align: center;
+}
+
+.sellColumn {
+  text-align: right;
+  padding-right: 20px;
 }

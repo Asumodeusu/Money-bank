@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux"; // Компонент-обертка для Redux
 import { store } from "./store/store.ts";
 import App from "./App/App.tsx";
-import "./CSS/index.css";
+import "./styles/index.css";
 
 const rootElement = document.getElementById("root");
 if (!rootElement)

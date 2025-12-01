@@ -7,7 +7,7 @@ import { useSignForm } from "../../hooks/useSignForm/useSignForm";
 export const Sign = () => {
   const navigate = useNavigate();
   useHeaderPreset("settings"); // хук хедера с разными пресетами
-  const { fields, updateField, isSubmitActive, submitForm } = useSignForm(); // дефолный хук формы
+  const { fields, updateField, isSubmitActive, submitForm } = useSignForm(); // дефолтный хук формы
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -5,7 +5,6 @@ export const homeItems: DataContent[] = [
     id: "account",
     icon: "/svg/icons/account.svg",
     label: "Account and Card",
-    // path: '/account' ← ДОБАВЬ ПУТИ
   },
   {
     id: "transfer",

@@ -1,6 +1,5 @@
-import styles from "./Layout.module.css";
-import { useLocation } from "react-router-dom";
-import { Outlet } from "react-router-dom"; // для добавления пейджев
+import styles from "./Layout.module.css"; // Наследует размеры
+import { useLocation, Outlet } from "react-router-dom";
 import { Footer } from "../components/UI/FooterTab/FooterTab";
 import { Header } from "../components/UI/HeaderBack/HeaderBack";
 import { LAYOUT_CONFIG } from "../constants/layouts";
@@ -16,8 +15,6 @@ export const MainLayout = () => {
 
   return (
     <div className={styles.mobileLayout}>
-      {" "}
-      {/* ← Наследует размеры */}
       {config?.showHeader && <Header />}
       <main className={styles.layoutContent}>
         <Outlet />

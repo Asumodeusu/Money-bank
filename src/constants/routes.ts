@@ -10,4 +10,4 @@ export const ROUTES = {
   SETTING: "/Setting",
 } as const; // константа с сылками юрл - для автоматизации
 
-export type RouteType = (typeof ROUTES)[keyof typeof ROUTES]; // тайп для дополнительной проверки, где нужны типы
+// export type RouteType = (typeof ROUTES)[keyof typeof ROUTES]; тайп для дополнительной проверки, где нужны типы
