@@ -18,11 +18,8 @@ body {
 }
 
 #root {
-  width: var(--mobile-width);
-  min-height: var(--mobile-height);
-  /* max-width: 90vw;
-  max-height: 90vh; */
-  aspect-ratio: 375 / 667;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   background: white;
@@ -48,13 +45,6 @@ body {
   --vw: calc(var(--mobile-width) / 100);
   --vh: calc(var(--mobile-height) / 100);
 }
-
-/* Пример использования адаптивных единиц */
-/* .adaptive-component {
-  width: calc(80 * var(--vw)); 
-  height: calc(50 * var(--vh)); 
-  font-size: calc(4 * var(--vw)); 
-} */
 
 /* Гарантируем что все страницы занимают всю высоту */
 .page-container {

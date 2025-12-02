@@ -1,21 +1,21 @@
 /* iPhone 12/13 (по умолчанию) */
-:root {
+/* :root {
   --mobile-width: 375px;
   --mobile-height: 667px;
-}
+} */
 
 /* Для больших телефонов */
-@media (min-height: 800px) {
+/* @media (min-height: 800px) {
   :root {
     --mobile-width: 420px;
-    --mobile-height: 844px; /* iPhone 12/13 Pro */
+    --mobile-height: 844px; 
   }
-}
+} */
 
 /* Для маленьких телефонов */
-@media (max-height: 600px) {
+/* @media (max-height: 600px) {
   :root {
     --mobile-width: 320px;
-    --mobile-height: 568px; /* iPhone SE */
+    --mobile-height: 568px; 
   }
-}
+} */
