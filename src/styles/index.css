@@ -19,14 +19,13 @@ body {
 
 #root {
   width: var(--mobile-width);
-  height: var(--mobile-height);
-  max-width: 90vw;
-  max-height: 90vh;
+  min-height: var(--mobile-height);
+  /* max-width: 90vw;
+  max-height: 90vh; */
   aspect-ratio: 375 / 667;
   overflow: hidden;
   position: relative;
   background: white;
-  border-radius: 24px;
 }
 
 /* Автоматическое масштабирование под разные экраны */
