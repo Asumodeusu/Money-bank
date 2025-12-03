@@ -18,24 +18,24 @@ export const SimpleMap = ({ center, zoom = 13 }: SimpleMapProps) => {
     script.async = true;
     
     script.onload = () => {
-      // @ts-ignore
+      // @ts-ignore - переделать, временно от ошибки ymaps
       ymaps.ready(() => {
         if (!mapRef.current || mapInstance.current) return;
         
         // Создаем карту
-        // @ts-ignore
+        // @ts-ignore - переделать, временно от ошибки ymaps
         mapInstance.current = new ymaps.Map(mapRef.current, {
           center: center,
           zoom: zoom,
         });
 
         // СОЗДАЕМ И ДОБАВЛЯЕМ МЕТКУ ПРАВИЛЬНО
-        // @ts-ignore
+        // @ts-ignore - переделать, временно от ошибки ymaps
         const placemark = new ymaps.Placemark(center, {
           balloonContent: 'Наш банк',
           hintContent: 'Наш банк' // Подсказка при наведении
         }, {
-          preset: 'islands#redIcon', // Синяя иконка
+          preset: 'islands#redIcon',
           draggable: false // Не перемещаемая
         });
         // ДОБАВЛЯЕМ МЕТКУ НА КАРТУ

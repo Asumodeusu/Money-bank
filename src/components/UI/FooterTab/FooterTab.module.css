@@ -1,5 +1,5 @@
 .footer {
-  background: white;
+  background: #F7FEF9;
   border-top: 1px solid #e0e0e0;
   padding: 15px 0;
 }
@@ -34,7 +34,7 @@
 }
 
 .navButtonActive {
-  background-color:#667eea;
+  background-color:#667eea; 
   border-radius: 30px;
   padding: 5px 10px 5px 10px;
   color: #667eea;

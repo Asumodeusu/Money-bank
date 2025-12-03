@@ -22,7 +22,7 @@ export const Home = () => {
         <header className={style.header}>
           <img
             className={style.headerAvatar}
-            src="/svg/Avatar.svg"
+            src="/svg/profile.svg"
             alt="аватар"
           />
           <span className={style.headerTitle}>Добро пожаловать, {userName}!</span>

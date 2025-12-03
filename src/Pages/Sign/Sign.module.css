@@ -7,7 +7,7 @@
 }
 
 .signForm {
-  background: white;
+  background: #F7FEF9;
   border-radius: 24px 24px 0px 0px;
   padding: 24px 20px;
   margin-top: auto;
@@ -20,7 +20,7 @@
 .signFormTitle {
   font-size: calc(7 * var(--vw));
   font-weight: 700;
-  color: #281c9d;
+  color: #667eea;
   text-align: left;
   margin-bottom: 8px;
 }
@@ -101,7 +101,7 @@
 
 .signFormButton {
   margin-top: auto;
-  background: #281c9d;
+  background: #667eea;
   color: white;
   border: none;
   font-size: 16px;

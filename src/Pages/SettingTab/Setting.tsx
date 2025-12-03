@@ -17,7 +17,7 @@ export const Setting = () => {
   return (
     <div className="page-container">
       <main className={style.settingContent}>
-        <img src="./svg/Avatar.svg" alt="avatar" className={style.settingImg} />
+        <img src="./svg/profile.svg" alt="avatar" className={style.settingImg} />
         <strong className={style.imgName}>Настройки</strong>
         <section className={style.contentUP}>
           {settingContent.map((item) => (

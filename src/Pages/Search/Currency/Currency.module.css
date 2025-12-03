@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  background: #F7FEF9;
 }
 
 .contentTitle {

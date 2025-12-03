@@ -1,9 +1,15 @@
 @import "./variables.css";
 
-* {
+*,
+*::before,
+*::after{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+button {
+  outline: none;
 }
 
 html,
@@ -12,9 +18,10 @@ body {
   height: 100%;
   overflow: hidden;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  background: grey; /* Фон вокруг мобильного экрана */
+  justify-content: center;
+  align-items: center;
+  background: white; /* Фон вокруг мобильного экрана */
+  outline: none;
 }
 
 #root {
@@ -22,7 +29,7 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
-  background: white;
+  background: #F7FEF9;
 }
 
 /* Автоматическое масштабирование под разные экраны */
@@ -41,10 +48,10 @@ body {
 }
 
 /* Адаптивные единицы измерения */
-:root {
+/* :root {
   --vw: calc(var(--mobile-width) / 100);
   --vh: calc(var(--mobile-height) / 100);
-}
+} */
 
 /* Гарантируем что все страницы занимают всю высоту */
 .page-container {

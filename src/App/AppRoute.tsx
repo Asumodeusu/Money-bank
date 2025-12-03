@@ -14,8 +14,9 @@ import {
 } from "../Pages";
 import { MainLayout } from "../Layouts/MainLayout";
 
-// Ленивая загрузка тяжелых компонентов, чтобы не перегружать устройства и это хорошая практика
+// TODO Ленивая загрузка тяжелых компонентов, чтобы не перегружать устройства
 // const Search = lazy(() => import('../components/Pages/Search/Search'));
+// протектед роут
 
 export default function AppRoute() {
   return (
