@@ -8,11 +8,6 @@ export const settingContent: DataContent[] = [
     label: "Password",
   },
   {
-    id: "ID",
-    icon: "/svg/Icon/38.svg",
-    label: "Тема",
-  },
-  {
     id: "Languages",
     icon: "/svg/Icon/38.svg",
     label: "Смена языка",

@@ -3,6 +3,7 @@ export * from "./Message/Message";
 export * from "./Search/Search";
 export * from "./Search/Map/Map"
 export * from "./Search/Currency/Currency"
+export * from "./Search/Exchange/Exchange"
 export * from "./SettingTab/Setting";
 export * from "./Sign/Sign";
 export * from "./Sign/SignIn"

@@ -1,0 +1,25 @@
+:root {
+  /***********COLOR**************/
+
+  --standart-color: ;
+  --bg-color: ;
+  --form-text-color: ;
+  --text-color: ;
+  --form-input-color: 
+  --box-shadow: ;
+
+  /***********SHRIFT**************/
+
+  --title-header-weight: 700;
+  --title-header-size: 22px;
+
+  --title-font-family: Inter;
+  --title-font-weight: 600;
+  --title-font-size: 18px;
+  --welcome-font-size: 40px;
+
+  --only-font-family: "IBM Plex mono";
+  --st-font-weight: 400;
+  --st-font-size: 16px;
+  --st-small-size: 12px;
+}

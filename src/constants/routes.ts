@@ -6,6 +6,7 @@ export const ROUTES = {
   SEARCH: "/Search",
   SEARCH_MAP: "/Search/map",
   SEARCH_CURRENCY: "/Search/currency",
+  SEARCH_EXCHANGE: "/Search/exchange",
   MESSAGE: "/Message",
   SETTING: "/Setting",
 } as const; // константа с сылками юрл - для автоматизации

@@ -11,6 +11,7 @@ import {
   Map,
   Currency,
   SignIn,
+  Exchange,
 } from "../Pages";
 import { MainLayout } from "../Layouts/MainLayout";
 
@@ -31,6 +32,7 @@ export default function AppRoute() {
             <Route path={ROUTES.SEARCH} element={<Search />} />
             <Route path={ROUTES.SEARCH_MAP} element={<Map />} />
             <Route path={ROUTES.SEARCH_CURRENCY} element={<Currency />} />
+            <Route path={ROUTES.SEARCH_EXCHANGE} element={<Exchange />} />
             <Route path={ROUTES.MESSAGE} element={<Message />} />
             <Route path={ROUTES.SETTING} element={<Setting />} />
           </Route>

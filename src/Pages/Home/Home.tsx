@@ -1,20 +1,30 @@
 import style from "./Home.module.css";
-import { homeItems } from "../../data/HomeData/HomeContent";
-import { useEffect,useState } from "react";
+import { homeItems, homeBalance } from "../../data/HomeData/HomeContent";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { DataContent } from "../../types/types";
+import { useTheme } from "../../hooks/useTheme/useTheme";
 
 //TODO колокольчик коунтер сдлеать
 
 export const Home = () => {
-
-  const [userName, setUserName] = useState('Гость');
+  const navigate = useNavigate();
+  const [userName, setUserName] = useState("Гость");
+  const { switchTheme } = useTheme();
 
   useEffect(() => {
     // При загрузке страницы берем имя из localStorage
-    const savedName = localStorage.getItem('userName');
+    const savedName = localStorage.getItem("userName");
     if (savedName) {
       setUserName(savedName);
     }
   }, []); // временное решение, потом через бэк будет
+
+  const handlePathClick = (item: DataContent) => {
+    if (item.path) {
+      navigate(item.path);
+    }
+  };
 
   return (
     <div className="page-container">
@@ -25,7 +35,9 @@ export const Home = () => {
             src="/svg/profile.svg"
             alt="аватар"
           />
-          <span className={style.headerTitle}>Добро пожаловать, {userName}!</span>
+          <span className={style.headerTitle}>
+            Добро пожаловать, {userName}!
+          </span>
           <img
             className={style.headerMessage}
             src="/svg/Icon/colocol.svg"
@@ -49,13 +61,26 @@ export const Home = () => {
               <button
                 key={item.id}
                 className={style.menuItem}
-                onClick={() => console.log("Clicked:", item.id)}
+                onClick={() => {
+                  if (item.type === "theme") {
+                    switchTheme(); // тема
+                  } else {
+                    handlePathClick(item); // навигация
+                  }
+                }}
               >
                 <img src={item.icon} alt={item.label} />
                 <span>{item.label}</span>
               </button>
             ))}
           </div>
+
+          {homeBalance.map((item) => (
+            <div key={item.id} className={style.menuCurrency}>
+              <span className={style.currencyItem}>{item.label}</span>
+              <span className={style.currencyItem}>{item.count}</span>
+            </div>
+          ))}
         </section>
       </div>
     </div>

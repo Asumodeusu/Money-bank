@@ -1,6 +1,5 @@
 .settingContent {
-  background: #667eea;
-  padding: 0px 0px 0px 0px;
+  background: var(--bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,18 +13,19 @@
   border-radius: 50%;
   margin-bottom: 12px;
   z-index: 2;
-  background: #F7FEF9;
+  background: var(--text-color-ui);
 }
 
 .imgName {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
+  font-family: var(--title-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  color: var(--form-text-color);
   z-index: 2;
 }
 
 .contentUP {
-  background: #F7FEF9;
+  background: var(--standart-color);
   border-radius: 24px 24px 0px 0px;
   padding: 100px 20px;
   box-sizing: border-box;
@@ -42,7 +42,7 @@
   padding: 16px 0;
   border: none;
   background: none;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--form-input-color);
   cursor: pointer;
 }
 
@@ -56,16 +56,19 @@
   align-items: center;
   width: 100%;
   padding: 16px 0;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid var(--form-input-color);
 }
 
 .buttonTitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
+  font-family: var(--title-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  color: var(--text-color);
 }
 
 .buttonText {
-  font-size: 16px;
-  color: #666;
+  color: var(--form-text-color);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
 }

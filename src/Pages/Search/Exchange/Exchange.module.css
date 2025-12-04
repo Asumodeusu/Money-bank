@@ -1,0 +1,101 @@
+.content {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentImg {
+  width: 80%;
+  max-width: 300px;
+  padding-bottom: 20px;
+}
+
+.contentForm {
+  background: var(--standart-color);
+  box-shadow: 0 2px 8px var(--box-shadow);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 400px; /*ограничение*/
+}
+
+.formChange {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formChangeMenu {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 1px solid var(--form-input-color);
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+.formChangeCurrency {
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+  color: var(--form-text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.formChangeInput {
+  padding: 12px;
+  border: none;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+  color: var(--text-color);
+  border-right: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formChangeButton {
+  background: var(--text-color-ui); /**/
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-left: 1px solid var(--form-text-color);
+  color: var(--form-text-color);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+}
+
+.formChangeButtonImg {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.formChangeImg {
+  width: 60px;
+  height: 60px;
+}
+
+.formButton {
+  margin-top: 40px;
+  background: var(--bg-color);
+  color: var(--text-color-ui);
+  border: none;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 16px;
+  width: 100%;
+}

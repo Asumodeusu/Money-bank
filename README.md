@@ -158,7 +158,6 @@
 │   │   ├── Currency
 │   │   │   ├── Currency.module.css
 │   │   │   └── Currency.tsx
-│   │   ├── CurrencyChange
 │   │   ├── Map
 │   │   │   └── Map.tsx
 │   │   ├── Search.module.css
@@ -199,6 +198,7 @@
 │   ├── SettingData
 │   │   └── SettingContent.ts
 │   └── footerTab.ts
+├── fonts
 ├── hooks
 │   ├── headerPreset
 │   │   └── useHeaderPreset.tsx
@@ -218,6 +218,5 @@
 │   └── variables.css
 ├── types
 │   └── types.ts
-├── utils
 └── vite-env.d.ts
 ```

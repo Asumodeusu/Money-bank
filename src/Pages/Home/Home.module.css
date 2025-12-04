@@ -1,5 +1,5 @@
 .pageHome {
-  background: #667eea;
+  background: var(--bg-color);
   width: 100%;
   height: 100%;
   display: flex;
@@ -18,13 +18,14 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #f7fef9;
+  background: var(--text-color-ui);
 }
 
 .headerTitle {
-  font-size: 18px;
-  font-weight: 600;
-  color: #f7fef9;
+  font-family: var(--title-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-header-weight);
+  color: var(--text-color-ui);
 }
 
 .headerMessage {
@@ -33,10 +34,11 @@
 }
 
 .contentCard {
-  background: #f7fef9;
+  background: var(--standart-color);
   border-radius: 24px 24px 0 0;
   padding: 24px 0 0;
   position: relative;
+  display: flex;
 }
 
 .card {
@@ -53,21 +55,21 @@
   flex-direction: column;
   justify-content: center;
   padding: 50px;
-  color: white;
+  color: var(--text-color-ui);
   gap: 30px;
 }
 
 .info {
-  font-size: 20px;
-  font-weight: bold;
+  font-family: var(--title-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
 }
 
-/* Меню - занимает всё оставшееся пространство */
 .contentMenu {
-  flex: 1;
-  background: #f7fef9;
+  flex: 1; /*проверить*/
+  background: var(--standart-color);
   padding: 20px;
-  overflow-y: auto;
+  padding-top: 3px;
 }
 
 .menu {
@@ -75,6 +77,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   height: fit-content;
+  padding-bottom: 20px;
 }
 
 .menuItem {
@@ -82,22 +85,48 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 16px 8px;
-  background: #f7fef9;
+  padding: 8px;
+  background: var(--standart-color);
   border: none;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px var(--box-shadow);
   cursor: pointer;
 }
 
 .menuItem img {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
 }
 
 .menuItem span {
-  font-size: 12px;
-  color: #333;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+  color: var(--form-text-color);
   text-align: center;
-  line-height: 1.2;
+}
+
+.menuCurrency {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--box-shadow);
+  background: var(--standart-color);
+  margin-bottom: 10px;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+  color: var(--text-color);
+}
+
+@media (width > 500px) {
+  .contentCard {
+    justify-content: center;
+  }
+
+  .card {
+    width: 50%;
+  }
 }

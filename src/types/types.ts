@@ -6,4 +6,5 @@ export interface DataContent {
   path?: string;
   text?: string;
   count?: number;
+  type?: string;
 }

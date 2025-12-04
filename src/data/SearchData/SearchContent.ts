@@ -21,5 +21,6 @@ export const menuContent: DataContent[] = [
     icon: "/svg/pictureSearch/490.svg",
     label: "Обмен валюты",
     text: "Покупка валюты",
+    path: ROUTES.SEARCH_EXCHANGE
   }
 ];

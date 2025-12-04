@@ -9,7 +9,7 @@ export const tabs: DataContent[] = [
   {
     id: "search",
     icon: "/svg/Icon/44.svg",
-    label: "Поиск",
+    label: "Финансы",
     path: ROUTES.SEARCH,
   },
   {

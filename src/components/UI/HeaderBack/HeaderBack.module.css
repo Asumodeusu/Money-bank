@@ -1,6 +1,5 @@
 .allHeader {
-  background: #F7FEF9;
-  border-bottom: 1px solid #e0e0e0;
+  background: var(--standart-color);
   padding: 15px 0px 15px 0px;
   display: flex;
   flex-direction: column;
@@ -17,23 +16,26 @@
 
 .headerBackHome {
   width: 20px;
+  align-self: center;
 }
 
 .headerBackText {
   padding-left: 15px;
-  color: black;
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-family: var(--title-font-family), sans-serif;
+  font-size: var(--title-header-size);
+  font-weight: var(--title-header-weight);
+  color: var(--text-color);
 }
 
 /* пресеты */
 
 .settings {
-  background: #667eea;
+  background: var(--bg-color);
   border-bottom: none;
 }
 
 .settings .headerBackText {
-  color: white;
+  color: var(--text-color-ui);
 }

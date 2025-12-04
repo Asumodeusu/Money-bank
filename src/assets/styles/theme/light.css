@@ -1,0 +1,10 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --text-color-ui: #fff;
+  --standart-color: #fff;
+  --bg-color: #667eea;
+  --form-text-color: #666;
+  --text-color: #1a1a1a;
+  --form-input-color: #ddd;
+  --box-shadow: rgba(0, 0, 0, 0.3);
+}

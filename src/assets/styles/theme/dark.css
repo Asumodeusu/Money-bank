@@ -1,0 +1,9 @@
+[data-theme="dark"] {
+  --text-color-ui: #ffffff;
+  --standart-color: #0d0d0d;
+  --bg-color: #4f46e5;
+  --form-text-color: #8c8c8c;
+  --text-color: #ffffff;
+  --form-input-color: #1a1a1a;
+  --box-shadow: rgba(157, 78, 221, 0.4);
+}

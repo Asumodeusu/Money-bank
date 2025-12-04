@@ -1,6 +1,6 @@
 .footer {
-  background: #F7FEF9;
-  border-top: 1px solid #e0e0e0;
+  background: var(--standart-color);
+  border-top: 1px solid var(--form-input-color);
   padding: 15px 0;
 }
 
@@ -21,7 +21,6 @@
   cursor: pointer;
 }
 
-
 .navButton img {
   width: 24px;
   height: 24px;
@@ -34,25 +33,21 @@
 }
 
 .navButtonActive {
-  background-color:#667eea; 
+  background-color: var(--bg-color);
   border-radius: 30px;
   padding: 5px 10px 5px 10px;
-  color: #667eea;
+  color: var(--bg-color);
 }
 
 .navButtonLabel {
-  font-size: 15px;
-  color: #666;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
   display: none;
+  color: var(--text-color-ui);
 }
 
 .navButtonActive .navButtonLabel {
   display: block;
-  color: white;
-  font-weight: 500;
   padding-left: 5px;
 }
-
-/* .nav-button--active {
-  color: #667eea;
-} */

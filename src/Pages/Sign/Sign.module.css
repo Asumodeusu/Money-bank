@@ -1,5 +1,5 @@
 .signPage {
-  background: #667eea;
+  background: var(--bg-color);
   width: 100%;
   height: 100%;
   display: flex;
@@ -7,34 +7,35 @@
 }
 
 .signForm {
-  background: #F7FEF9;
+  background: var(--standart-color);
   border-radius: 24px 24px 0px 0px;
   padding: 24px 20px;
   margin-top: auto;
-  flex: 1; /* ← Занимает оставшееся пространство */
+  flex: 1;
   display: flex;
   flex-direction: column;
   min-height: 0;
 }
 
 .signFormTitle {
-  font-size: calc(7 * var(--vw));
-  font-weight: 700;
-  color: #667eea;
+  font-family: var(--title-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  color: var(--bg-color);
   text-align: left;
   margin-bottom: 8px;
 }
 
 .signFormSubtitle {
-  color: #666;
-  font-size: calc(4 * var(--vw)); /* ← Адаптивный размер */
+  color: var(--form-text-color);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
   text-align: left;
   margin-bottom: 20px;
 }
 
 .signFormImage {
-  width: calc(50 * var(--vw));
-  height: calc(50 * var(--vw));
   margin: 0 auto 20px;
   display: block;
 }
@@ -48,10 +49,13 @@
   width: 100%;
   padding: 12px 16px;
   background: transparent;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--form-input-color);
   border-radius: 16px;
-  font-size: 16px;
-  color: black;
+  color: var(--text-color);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+  outline: none;
 }
 
 .signFormCheckboxLabel {
@@ -69,7 +73,7 @@
 .signFormCustomCheckbox {
   width: 20px;
   height: 20px;
-  border: 2px solid #ddd;
+  border: 2px solid var(--form-input-color);
   border-radius: 4px;
   display: inline-block;
   position: relative;
@@ -78,8 +82,8 @@
 }
 
 .signFormCheckbox:checked + .signFormCustomCheckbox {
-  background: #667eea;
-  border-color: #667eea;
+  background: var(--bg-color);
+  border-color: var(--bg-color);
 }
 
 .signFormCheckbox:checked + .signFormCustomCheckbox::after {
@@ -93,19 +97,24 @@
 }
 
 .signFormText {
-  color: #666;
-  font-size: calc(3.5 * var(--vw));
-  line-height: 1.4;
+  color: var(--form-text-color);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+  line-height: 1.7;
   flex: 1;
 }
 
 .signFormButton {
   margin-top: auto;
-  background: #667eea;
-  color: white;
+  background: var(--bg-color);
+  color: var(--text-color-ui);
   border: none;
   font-size: 16px;
   font-weight: 600;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
   cursor: pointer;
   padding: 12px 16px;
   border-radius: 16px;
@@ -114,20 +123,24 @@
 
 .signFormButtonOff {
   cursor: not-allowed;
-  background: #ddd;
-  color: #666;
+  background: var(--form-input-color);
+  color: var(--form-text-color);
 }
 
 .signFormFooterText {
   text-align: center;
-  color: #666;
+  color: var(--form-text-color);
   margin-top: 16px;
-  font-size: calc(3.5 * var(--vw));
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
 }
 
 .signFormLink {
-  color: #667eea;
-  font-weight: 600;
+  color: var(--bg-color);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
   cursor: pointer;
   text-decoration: none;
 }
