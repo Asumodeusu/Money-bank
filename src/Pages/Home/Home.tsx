@@ -1,14 +1,12 @@
 import style from "./Home.module.css";
-import { homeItems, homeBalance } from "../../data/HomeData/HomeContent";
+import { homeItems, homeBalance } from "../../data/HomeContent";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { DataContent } from "../../types/types";
-import { useTheme } from "../../hooks/useTheme/useTheme";
-
+import { useTheme } from "../../hooks/useTheme";
+import { useItemNavigation } from "../../hooks/useItemNavigation";
 //TODO колокольчик коунтер сдлеать
 
 export const Home = () => {
-  const navigate = useNavigate();
+  const { navigateToItem } = useItemNavigation();
   const [userName, setUserName] = useState("Гость");
   const { switchTheme } = useTheme();
 
@@ -19,12 +17,6 @@ export const Home = () => {
       setUserName(savedName);
     }
   }, []); // временное решение, потом через бэк будет
-
-  const handlePathClick = (item: DataContent) => {
-    if (item.path) {
-      navigate(item.path);
-    }
-  };
 
   return (
     <div className="page-container">
@@ -51,7 +43,7 @@ export const Home = () => {
           <div className={style.cardInfo}>
             <span className={style.info}>{userName}</span>
             <span className={style.info}>**** **** **** 1772</span>
-            <span className={style.info}>3 000 000 rub</span>
+            <span className={style.info}>3 000 000 000 rub</span>
           </div>
         </section>
 
@@ -65,7 +57,7 @@ export const Home = () => {
                   if (item.type === "theme") {
                     switchTheme(); // тема
                   } else {
-                    handlePathClick(item); // навигация
+                    navigateToItem(item); // навигация
                   }
                 }}
               >

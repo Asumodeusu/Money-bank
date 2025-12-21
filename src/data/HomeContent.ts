@@ -1,5 +1,5 @@
-import { DataContent } from "../../types/types";
-import { ROUTES } from "../../constants/routes";
+import { DataContent } from "../types/types";
+import { ROUTES } from "../constants/routes";
 
 export const homeItems: DataContent[] = [
   {

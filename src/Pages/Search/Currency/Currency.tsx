@@ -1,9 +1,9 @@
 import style from "./Currency.module.css";
-import { useSimpleCurrency } from "../../../hooks/useSimpleCurrency/useSimpleCurrency";
+import { useSimpleCurrency } from "../../../hooks/useSimpleCurrency";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
 
-export const Currency = () => {
+const Currency = () => {
   const navigate = useNavigate();
   const { rates, loading } = useSimpleCurrency();
 
@@ -11,7 +11,7 @@ export const Currency = () => {
     return (
       <div className="page-container">
         <main className={style.content}>
-          <div>Загрузка валют...</div>
+          <div>Обновление валют...</div>
         </main>
       </div>
     );
@@ -31,7 +31,7 @@ export const Currency = () => {
             <button
               key={currency.code}
               className={style.currencyButton}
-              onClick={() => navigate(ROUTES.SEARCH_EXCHANGE)}
+              onClick={() => navigate(ROUTES.SEARCH_EXCHANGE)} // надо ли?!
             >
               <span className={style.codeColumn}>{currency.code}</span>
               <span className={style.buyColumn}>
@@ -47,3 +47,5 @@ export const Currency = () => {
     </div>
   );
 };
+
+export default Currency;

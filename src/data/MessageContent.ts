@@ -1,4 +1,4 @@
-import { DataContent } from "../../types/types";
+import { DataContent } from "../types/types";
 
 export const massageContent: DataContent[] = [
   {

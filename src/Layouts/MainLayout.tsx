@@ -1,4 +1,4 @@
-import styles from "./Layout.module.css"; // Наследует размеры
+import styles from "./Layout.module.css";
 import { useLocation, Outlet } from "react-router-dom";
 import { Footer } from "../components/UI/FooterTab/FooterTab";
 import { Header } from "../components/UI/HeaderBack/HeaderBack";

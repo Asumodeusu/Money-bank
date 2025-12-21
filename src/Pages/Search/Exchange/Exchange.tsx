@@ -1,7 +1,6 @@
 import style from "./Exchange.module.css";
 
-export const Exchange = () => {
-
+const Exchange = () => {
   return (
     <div className="page-container">
       <main className={style.content}>
@@ -9,6 +8,7 @@ export const Exchange = () => {
           className={style.contentImg}
           src="../../../public/svg/ilustrate/phone.svg"
           alt="телефон с монетами"
+          loading="lazy"
         />
         <div className={style.contentForm}>
           <form className={style.formChange}>
@@ -26,7 +26,8 @@ export const Exchange = () => {
                 className={style.formChangeButton}
                 type="button"
                 aria-label="Выбрать валюту"
-              >RUB
+              >
+                RUB
                 <img
                   className={style.formChangeButtonImg}
                   src="../../../public/svg/icon/01.svg"
@@ -55,7 +56,8 @@ export const Exchange = () => {
                 className={style.formChangeButton}
                 type="button"
                 aria-label="Выбрать валюту"
-              >USD
+              >
+                USD
                 <img
                   className={style.formChangeButtonImg}
                   src="../../../public/svg/icon/01.svg"
@@ -73,3 +75,5 @@ export const Exchange = () => {
     </div>
   );
 };
+
+export default Exchange;

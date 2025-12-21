@@ -1,12 +1,19 @@
-import { massageContent } from "../../data/MessageData/MessageContent";
 import style from "./Message.module.css";
+import { useItemNavigation } from "../../hooks/useItemNavigation";
+import { massageContent } from "../../data/MessageContent";
 
-export const Message = () => {
+const Message = () => {
+  const { navigateToItem } = useItemNavigation();
+
   return (
     <div className="page-container">
       <main className={style.massageContent}>
         {massageContent.map((item) => (
-          <button key={item.id} className={style.buttonContent}>
+          <button
+            key={item.id}
+            className={style.buttonContent}
+            onClick={() => navigateToItem(item)}
+          >
             {/* Левая часть */}
             <div className={style.buttonLeft}>
               <img src={item.icon} className={style.buttonImg} alt={item.id} />
@@ -23,3 +30,5 @@ export const Message = () => {
     </div>
   );
 };
+
+export default Message;

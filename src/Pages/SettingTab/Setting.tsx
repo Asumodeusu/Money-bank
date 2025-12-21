@@ -1,27 +1,28 @@
-import { settingContent } from "../../data/SettingData/SettingContent";
-import { useNavigate } from "react-router-dom";
 import style from "./Setting.module.css";
-import { DataContent } from "../../types/types";
 import { useHeaderPreset } from "../../hooks";
+import { settingContent } from "../../data/SettingContent";
+import { useItemNavigation } from "../../hooks/useItemNavigation";
 
-export const Setting = () => {
-  const navigate = useNavigate();
-  useHeaderPreset("settings")
-
-  const handlePathClick = (item: DataContent) => {
-    if (item.path) {
-    navigate(item.path)
-    }
-  }
+const Setting = () => {
+  const { navigateToItem } = useItemNavigation();
+  useHeaderPreset("settings");
 
   return (
     <div className="page-container">
       <main className={style.settingContent}>
-        <img src="./svg/profile.svg" alt="avatar" className={style.settingImg} />
+        <img
+          src="./svg/profile.svg"
+          alt="avatar"
+          className={style.settingImg}
+        />
         <strong className={style.imgName}>Настройки</strong>
         <section className={style.contentUP}>
           {settingContent.map((item) => (
-            <button key={item.id} className={style.buttonContent} onClick={() => handlePathClick(item)}>
+            <button
+              key={item.id}
+              className={style.buttonContent}
+              onClick={() => navigateToItem(item)}
+            >
               <strong className={style.buttonTitle}>{item.label}</strong>
               <img src={item.icon} className={style.buttonImg} alt={item.id} />
             </button>
@@ -35,3 +36,5 @@ export const Setting = () => {
     </div>
   );
 };
+
+export default Setting;

@@ -53,7 +53,7 @@
   font-family: var(--only-font-family), sans-serif;
   font-size: var(--st-font-size);
   font-weight: var(--st-font-weight);
-  color: var(--text-color);
+  color: var(--form-text-color);
   border-right: none;
   outline: none;
   width: 100%;

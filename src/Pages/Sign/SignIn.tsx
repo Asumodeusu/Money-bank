@@ -2,7 +2,7 @@ import style from "./Sign.module.css";
 import { useNavigate, Link } from "react-router-dom";
 import { useHeaderPreset } from "../../hooks";
 import { ROUTES } from "../../constants/routes";
-import { useSignForm } from "../../hooks/useSignForm/useSignForm";
+import { useSignForm } from "../../hooks/useSignForm";
 
 export const SignIn = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export const SignIn = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (submitForm()) {
-      navigate("/Home", {
+      navigate(ROUTES.HOME, {
         state: { userName: fields.user }, // сохранение имени и передача его в главную стр
       });
     }
