@@ -6,7 +6,7 @@ const Exchange = () => {
       <main className={style.content}>
         <img
           className={style.contentImg}
-          src="../../../public/svg/ilustrate/phone.svg"
+          src="/svg/ilustrate/phone.svg"
           alt="телефон с монетами"
           loading="lazy"
         />
@@ -30,7 +30,7 @@ const Exchange = () => {
                 RUB
                 <img
                   className={style.formChangeButtonImg}
-                  src="../../../public/svg/icon/01.svg"
+                  src="/svg/icon/01.svg"
                   alt=""
                 />
               </button>
@@ -38,7 +38,7 @@ const Exchange = () => {
 
             <img
               className={style.formChangeImg}
-              src="../../../public/svg/icons/Arrow.svg"
+              src="/svg/icons/Arrow.svg"
               alt=""
             />
 
@@ -60,7 +60,7 @@ const Exchange = () => {
                 USD
                 <img
                   className={style.formChangeButtonImg}
-                  src="../../../public/svg/icon/01.svg"
+                  src="/svg/icon/01.svg"
                   alt=""
                 />
               </button>
