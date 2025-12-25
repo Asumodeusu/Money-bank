@@ -1,6 +1,8 @@
 import style from "./Exchange.module.css";
+import { useTranslation } from "react-i18next";
 
 const Exchange = () => {
+  const { t } = useTranslation();
   return (
     <div className="page-container">
       <main className={style.content}>
@@ -30,7 +32,7 @@ const Exchange = () => {
                 RUB
                 <img
                   className={style.formChangeButtonImg}
-                  src="/svg/icon/01.svg"
+                  src="/svg/Icon/01.svg"
                   alt=""
                 />
               </button>
@@ -60,14 +62,14 @@ const Exchange = () => {
                 USD
                 <img
                   className={style.formChangeButtonImg}
-                  src="/svg/icon/01.svg"
+                  src="/svg/Icon/01.svg"
                   alt=""
                 />
               </button>
             </div>
 
             <button className={style.formButton} type="submit">
-              Перевод
+              {t("button.submit_ex")}
             </button>
           </form>
         </div>

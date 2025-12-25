@@ -1,0 +1,19 @@
+.buttonDone {
+  margin-top: 40px;
+  background: var(--bg-color);
+  color: var(--text-color-ui);
+  border: none;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.buttonOff {
+  cursor: not-allowed;
+  background: var(--form-input-color);
+  color: var(--form-text-color);
+}

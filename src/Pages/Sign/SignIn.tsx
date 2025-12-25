@@ -3,10 +3,12 @@ import { useNavigate, Link } from "react-router-dom";
 import { useHeaderPreset } from "../../hooks";
 import { ROUTES } from "../../constants/routes";
 import { useSignForm } from "../../hooks/useSignForm";
+import { useTranslation } from 'react-i18next';
 
 export const SignIn = () => {
   const navigate = useNavigate();
   useHeaderPreset("settings"); // хук хедера с разными пресетами
+  const { t } = useTranslation();
   const { fields, updateField, isSubmitActive, submitForm } =
     useSignForm("signin");
 
@@ -22,8 +24,8 @@ export const SignIn = () => {
     <div className="page-container">
       <div className={style.signPage}>
         <form className={style.signForm} onSubmit={handleSubmit}>
-          <h1 className={style.signFormTitle}>С возвращением,</h1>
-          <p className={style.signFormSubtitle}>выполните авторизацию</p>
+          <h1 className={style.signFormTitle}>{t('signIn.h1')}</h1>
+          <p className={style.signFormSubtitle}>{t('signIn.p1')}</p>
           <img
             className={style.signFormImage}
             src="/svg/zamok.svg"
@@ -35,7 +37,7 @@ export const SignIn = () => {
               name="user"
               className={style.signFormInput}
               type="text"
-              placeholder="User"
+              placeholder={t('signIn.user')}
               value={fields.user}
               onChange={(e) => updateField("user", e.target.value)}
             />
@@ -45,7 +47,7 @@ export const SignIn = () => {
               name="Password"
               className={style.signFormInput}
               type="password"
-              placeholder="Password"
+              placeholder={t('signIn.password')}
               value={fields.password}
               onChange={(e) => updateField("password", e.target.value)}
             />
@@ -57,14 +59,12 @@ export const SignIn = () => {
               !isSubmitActive ? style.signFormButtonOff : ""
             }`}
           >
-            Войти
+            {t('button.submit_sign')}
           </button>
 
           <p className={style.signFormFooterText}>
-            У вас нет профиля?
-            <Link to={ROUTES.SIGN} className={style.signFormLink}>
-              Зарегистрируйтесь
-            </Link>
+            {t('signIn.p2')}
+            <Link to={ROUTES.SIGN} className={style.signFormLink}> {t('signIn.link')}</Link>
           </p>
         </form>
       </div>

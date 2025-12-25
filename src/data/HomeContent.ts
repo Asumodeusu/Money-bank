@@ -1,24 +1,25 @@
 import { DataContent } from "../types/types";
 import { ROUTES } from "../constants/routes";
+import i18n from 'i18next';
 
 export const homeItems: DataContent[] = [
   {
-    id: "mobile",
+    id: "valute",
     icon: "/svg/icons/mobile.svg",
-    label: "Обменник",
+    label: i18n.t('home.valute'),
     path: ROUTES.SEARCH_EXCHANGE,
     type: "navigate"
   },
   {
-    id: "transfer",
+    id: "theme",
     icon: "/svg/icons/transfer.svg",
-    label: "Смена темы",
+    label: i18n.t('home.theme'),
     type: "theme"
   },
   {
-    id: "credit-card",
+    id: "card",
     icon: "/svg/icons/credit-card.svg",
-    label: "Card",
+    label: i18n.t('home.card'),
     type: "navigate"
   },
 ];

@@ -3,10 +3,12 @@ import { useNavigate, Link } from "react-router-dom";
 import { useHeaderPreset } from "../../hooks";
 import { ROUTES } from "../../constants/routes";
 import { useSignForm } from "../../hooks/useSignForm";
+import { useTranslation } from 'react-i18next';
 
 export const Sign = () => {
   const navigate = useNavigate();
   useHeaderPreset("settings"); // хук хедера с разными пресетами
+  const { t } = useTranslation();
   const { fields, updateField, isSubmitActive, submitForm } = useSignForm(); // дефолтный хук формы
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -22,8 +24,8 @@ export const Sign = () => {
     <div className="page-container">
       <div className={style.signPage}>
         <form className={style.signForm} onSubmit={handleSubmit}>
-          <h1 className={style.signFormTitle}>Добро пожаловать,</h1>
-          <p className={style.signFormSubtitle}>создайте профиль</p>
+          <h1 className={style.signFormTitle}>{t('sign.h1')}</h1>
+          <p className={style.signFormSubtitle}>{t('sign.p1')}</p>
           <img
             className={style.signFormImage}
             src="/svg/humen.svg"
@@ -35,7 +37,7 @@ export const Sign = () => {
               name="user"
               className={style.signFormInput}
               type="text"
-              placeholder="User"
+              placeholder={t('sign.user')}
               value={fields.user}
               onChange={(e) => updateField("user", e.target.value)}
             />
@@ -45,7 +47,7 @@ export const Sign = () => {
               name="Number"
               className={style.signFormInput}
               type="Number"
-              placeholder="Number"
+              placeholder="+7(9..)"
               value={fields.number}
               onChange={(e) => updateField("number", e.target.value)}
             />
@@ -55,7 +57,7 @@ export const Sign = () => {
               name="Password"
               className={style.signFormInput}
               type="password"
-              placeholder="Password"
+              placeholder={t('sign.password')}
               value={fields.password}
               onChange={(e) => updateField("password", e.target.value)}
             />
@@ -70,7 +72,7 @@ export const Sign = () => {
             />
             <span className={style.signFormCustomCheckbox}></span>
             <span className={style.signFormText}>
-              Подтвердите обработку данных
+              {t('sign.span')}
             </span>
           </label>
 
@@ -81,14 +83,12 @@ export const Sign = () => {
             }`} // ксс меняется при валидации
             disabled={!isSubmitActive}
           >
-            Войти
+            {t('button.submit_sign')}
           </button>
 
           <p className={style.signFormFooterText}>
-            У вас есть профиль?
-            <Link to={ROUTES.SIGN_IN} className={style.signFormLink}>
-              Войдите
-            </Link>
+            {t('sign.p2')}
+            <Link to={ROUTES.SIGN_IN} className={style.signFormLink}> {t('sign.link')}</Link>
           </p>
         </form>
       </div>

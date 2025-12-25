@@ -2,8 +2,10 @@ import style from "./Currency.module.css";
 import { useSimpleCurrency } from "../../../hooks/useSimpleCurrency";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../constants/routes";
+import { useTranslation } from "react-i18next";
 
 const Currency = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { rates, loading } = useSimpleCurrency();
 
@@ -11,7 +13,7 @@ const Currency = () => {
     return (
       <div className="page-container">
         <main className={style.content}>
-          <div>Обновление валют...</div>
+          <div>{t('currency.response')}</div>
         </main>
       </div>
     );
@@ -21,9 +23,9 @@ const Currency = () => {
     <div className="page-container">
       <main className={style.content}>
         <section className={style.contentTitle}>
-          <span className={style.codeColumn}>КОД</span>
-          <span className={style.buyColumn}>Покупка</span>
-          <span className={style.sellColumn}>Продажа</span>
+          <span className={style.codeColumn}>{t('currency.cod')}</span>
+          <span className={style.buyColumn}>{t('currency.pay')}</span>
+          <span className={style.sellColumn}>{t('currency.sell')}</span>
         </section>
 
         <section className={style.currency}>

@@ -3,11 +3,13 @@ import { homeItems, homeBalance } from "../../data/HomeContent";
 import { useEffect, useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
 import { useItemNavigation } from "../../hooks/useItemNavigation";
+import { useTranslation } from "react-i18next";
 //TODO колокольчик коунтер сдлеать
 
 export const Home = () => {
   const { navigateToItem } = useItemNavigation();
   const [userName, setUserName] = useState("Гость");
+  const { t } = useTranslation();
   const { switchTheme } = useTheme();
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export const Home = () => {
             alt="аватар"
           />
           <span className={style.headerTitle}>
-            Добро пожаловать, {userName}!
+            {t('home.span')} {userName}!
           </span>
           <img
             className={style.headerMessage}
