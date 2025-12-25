@@ -1,8 +1,10 @@
 import style from "./Search.module.css";
 import { menuContent } from "../../data/SearchContent";
 import { useItemNavigation } from "../../hooks/useItemNavigation";
+import { useTranslation } from "react-i18next";
 
 const Search = () => {
+  const { t } = useTranslation();
   const { navigateToItem } = useItemNavigation();
 
   return (
@@ -15,8 +17,8 @@ const Search = () => {
             onClick={() => navigateToItem(item)}
           >
             <div className={style.buttonContent}>
-              <strong className={style.buttonTitle}>{item.label}</strong>
-              <span className={style.buttonText}>{item.text}</span>
+              <strong className={style.buttonTitle}>{t(item.label)}</strong>
+              <span className={style.buttonText}>{t(item.text || "")}</span>
             </div>
             <img
               className={style.buttonImg}

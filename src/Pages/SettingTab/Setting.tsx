@@ -35,7 +35,7 @@ const Setting = () => {
               className={style.buttonContent}
               onClick={() => handleButtonClick(item)}
             >
-              <strong className={style.buttonTitle}>{item.label}</strong>
+              <strong className={style.buttonTitle}>{t(item.label)}</strong>
               <img src={item.icon} className={style.buttonImg} alt={item.id} />
             </button>
           ))}

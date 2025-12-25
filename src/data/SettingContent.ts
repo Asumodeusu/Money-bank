@@ -1,6 +1,5 @@
 import { DataContent } from "../types/types";
 import { ROUTES } from "../constants/routes";
-import i18n from "../i18n/i18n";
 
 export const settingContent: DataContent[] = [
   // {
@@ -11,7 +10,7 @@ export const settingContent: DataContent[] = [
   {
     id: "languages",
     icon: "/svg/Icon/38.svg",
-    label: i18n.t("setting.languages"),
+    label: "setting.languages",
   },
   // {
   //   id: "App",
@@ -21,7 +20,7 @@ export const settingContent: DataContent[] = [
   {
     id: "exit",
     icon: "/svg/Icon/38.svg",
-    label: i18n.t("setting.exit"),
+    label: "setting.exit",
     path: ROUTES.WELCOME,
   },
 ];

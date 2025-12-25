@@ -1,8 +1,10 @@
 import style from "./Message.module.css";
 import { useItemNavigation } from "../../hooks/useItemNavigation";
 import { massageContent } from "../../data/MessageContent";
+import { useTranslation } from "react-i18next";
 
 const Message = () => {
+  const { t } = useTranslation();
   const { navigateToItem } = useItemNavigation();
 
   return (
@@ -18,8 +20,8 @@ const Message = () => {
             <div className={style.buttonLeft}>
               <img src={item.icon} className={style.buttonImg} alt={item.id} />
               <div className={style.textContent}>
-                <strong className={style.buttonTitle}>{item.label}</strong>
-                <span className={style.buttonText}>{item.text}</span>
+                <strong className={style.buttonTitle}>{t(item.label)}</strong>
+                <span className={style.buttonText}>{t(item.text || "")}</span>
               </div>
             </div>
             {/* Правая часть */}

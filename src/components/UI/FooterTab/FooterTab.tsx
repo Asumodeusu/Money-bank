@@ -1,8 +1,10 @@
 import { tabs } from "../../../data/footerTab";
 import style from "./FooterTab.module.css";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   // Определяем активную вкладку по текущему пути
@@ -29,7 +31,7 @@ export const Footer = () => {
             onClick={() => handleTabChange(tab.id)}
           >
             <img src={tab.icon} alt={tab.label} />
-            <span className={style.navButtonLabel}>{tab.label}</span>
+            <span className={style.navButtonLabel}>{t(tab.label)}</span>
           </button>
         ))}
       </nav>

@@ -64,7 +64,7 @@ export const Home = () => {
                 }}
               >
                 <img src={item.icon} alt={item.label} />
-                <span>{item.label}</span>
+                <span>{t(item.label)}</span>
               </button>
             ))}
           </div>

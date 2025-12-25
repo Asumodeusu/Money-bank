@@ -2,8 +2,10 @@ import style from "./HeaderBack.module.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { backs } from "../../../data/HeaderBack";
 import { useAppSelector } from "../../../store/hooks";
+import { useTranslation } from "react-i18next";
 
 export const Header = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -31,7 +33,7 @@ export const Header = () => {
             alt="назад"
           />
           {currentItem && (
-            <span className={style.headerBackText}>{currentItem.label}</span>
+            <span className={style.headerBackText}>{t(currentItem.label)}</span>
           )}
         </button>
       </header>
