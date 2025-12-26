@@ -4,7 +4,7 @@
     "signIn": "Login",
     "search": "Finance",
     "search_map": "Geolocation",
-    "search_currency": "Currencies",
+    "search_currency": "Currency",
     "search_exchange": "Currency Exchange",
     "message": "Messages",
     "setting": "Settings"
@@ -45,7 +45,7 @@
     "span": "Welcome,",
     "valute": "Currency Exchange",
     "theme": "Theme Change",
-    "card": "Card"
+    "card": "Reset balance"
   },
 
   "search": {
@@ -66,7 +66,7 @@
 
   "message": {
     "label_bank": "Bank СНГ",
-    "text_bank": "Your account balance: 3,000,000,000 rub",
+    "text_bank": "Your account balance: 3,000,000 ₽",
     "label_account": "Account",
     "label_alert": "Income",
     "label_pay": "Payments",
@@ -79,5 +79,9 @@
     "exit": "Logout",
     "id": "Support",
     "p": "+7(922)1772186"
+  },
+
+  "hook": {
+    "alert": "In development"
   }
 }

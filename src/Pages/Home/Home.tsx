@@ -1,16 +1,16 @@
 import style from "./Home.module.css";
 import { homeItems, homeBalance } from "../../data/HomeContent";
 import { useEffect, useState } from "react";
-import { useTheme } from "../../hooks/useTheme";
-import { useItemNavigation } from "../../hooks/useItemNavigation";
+import { useHomeNavigation } from "../../hooks/useHomeNavigation"; 
 import { useTranslation } from "react-i18next";
+import { useBalance } from "../../hooks/useBalance";
 //TODO колокольчик коунтер сдлеать
 
 export const Home = () => {
-  const { navigateToItem } = useItemNavigation();
+  const { handleItemClick } = useHomeNavigation();
   const [userName, setUserName] = useState("Гость");
   const { t } = useTranslation();
-  const { switchTheme } = useTheme();
+  const { balances } = useBalance();
 
   useEffect(() => {
     // При загрузке страницы берем имя из localStorage
@@ -18,7 +18,7 @@ export const Home = () => {
     if (savedName) {
       setUserName(savedName);
     }
-  }, []); // временное решение, потом через бэк будет
+  }, []);
 
   return (
     <div className="page-container">
@@ -30,7 +30,7 @@ export const Home = () => {
             alt="аватар"
           />
           <span className={style.headerTitle}>
-            {t('home.span')} {userName}!
+            {t("home.span")} {userName}!
           </span>
           <img
             className={style.headerMessage}
@@ -45,7 +45,7 @@ export const Home = () => {
           <div className={style.cardInfo}>
             <span className={style.info}>{userName}</span>
             <span className={style.info}>**** **** **** 1772</span>
-            <span className={style.info}>3 000 000 000 rub</span>
+            <span className={style.info}>{balances.RUB.toLocaleString("ru-RU")} ₽</span>
           </div>
         </section>
 
@@ -55,13 +55,7 @@ export const Home = () => {
               <button
                 key={item.id}
                 className={style.menuItem}
-                onClick={() => {
-                  if (item.type === "theme") {
-                    switchTheme(); // тема
-                  } else {
-                    navigateToItem(item); // навигация
-                  }
-                }}
+                onClick={() => handleItemClick(item)}
               >
                 <img src={item.icon} alt={item.label} />
                 <span>{t(item.label)}</span>
@@ -72,7 +66,7 @@ export const Home = () => {
           {homeBalance.map((item) => (
             <div key={item.id} className={style.menuCurrency}>
               <span className={style.currencyItem}>{item.label}</span>
-              <span className={style.currencyItem}>{item.count}</span>
+              <span className={style.currencyItem}>{balances[item.key].toFixed(2)}</span>
             </div>
           ))}
         </section>

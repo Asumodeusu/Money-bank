@@ -1,9 +1,12 @@
+import { BalanceProvider } from "../context/BalanceProvider";
 import AppRoute from "./AppRoute";
 
 export default function App() {
   return (
     <div className="mobile-app">
-      <AppRoute />
+      <BalanceProvider>
+        <AppRoute />
+      </BalanceProvider>
     </div>
   );
 }

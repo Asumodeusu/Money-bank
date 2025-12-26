@@ -11,8 +11,8 @@ const Setting = () => {
   useHeaderPreset("settings");
   const { toggleLanguage } = useLang();
 
-    // Обработчик для разных кнопок
-  const handleButtonClick = (item: typeof settingContent[0]) => {
+  // Обработчик для разных кнопок
+  const handleButtonClick = (item: (typeof settingContent)[0]) => {
     if (item.id === "languages") {
       // Если это кнопка языка - переключаем язык
       toggleLanguage();

@@ -1,5 +1,6 @@
-import { DataContent } from "../types/types";
+import { DataContent, DataBalance } from "../types/types";
 import { ROUTES } from "../constants/routes";
+
 
 export const homeItems: DataContent[] = [
   {
@@ -7,36 +8,34 @@ export const homeItems: DataContent[] = [
     icon: "/svg/icons/mobile.svg",
     label: "home.valute",
     path: ROUTES.SEARCH_EXCHANGE,
-    type: "navigate",
   },
   {
     id: "theme",
     icon: "/svg/icons/transfer.svg",
     label: "home.theme",
-    type: "theme",
   },
   {
-    id: "card",
+    id: "reset",
     icon: "/svg/icons/credit-card.svg",
     label: "home.card",
-    type: "navigate",
   },
 ];
 
-export const homeBalance: DataContent[] = [
+// key - доступ к balances.USD
+export const homeBalance: DataBalance[] = [
   {
     id: "USD",
     label: "USD",
-    count: 0.0,
+    key: "USD" as const, 
   },
   {
     id: "EUR",
     label: "EUR",
-    count: 0.0,
+    key: "EUR" as const,
   },
   {
     id: "CNY",
     label: "CNY",
-    count: 0.0,
+    key: "CNY" as const,
   },
 ];

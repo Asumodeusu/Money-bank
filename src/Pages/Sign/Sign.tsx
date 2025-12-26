@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useHeaderPreset } from "../../hooks";
 import { ROUTES } from "../../constants/routes";
 import { useSignForm } from "../../hooks/useSignForm";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 export const Sign = () => {
   const navigate = useNavigate();
@@ -24,8 +24,8 @@ export const Sign = () => {
     <div className="page-container">
       <div className={style.signPage}>
         <form className={style.signForm} onSubmit={handleSubmit}>
-          <h1 className={style.signFormTitle}>{t('sign.h1')}</h1>
-          <p className={style.signFormSubtitle}>{t('sign.p1')}</p>
+          <h1 className={style.signFormTitle}>{t("sign.h1")}</h1>
+          <p className={style.signFormSubtitle}>{t("sign.p1")}</p>
           <img
             className={style.signFormImage}
             src="/svg/humen.svg"
@@ -37,7 +37,7 @@ export const Sign = () => {
               name="user"
               className={style.signFormInput}
               type="text"
-              placeholder={t('sign.user')}
+              placeholder={t("sign.user")}
               value={fields.user}
               onChange={(e) => updateField("user", e.target.value)}
             />
@@ -57,7 +57,7 @@ export const Sign = () => {
               name="Password"
               className={style.signFormInput}
               type="password"
-              placeholder={t('sign.password')}
+              placeholder={t("sign.password")}
               value={fields.password}
               onChange={(e) => updateField("password", e.target.value)}
             />
@@ -71,9 +71,7 @@ export const Sign = () => {
               onChange={(e) => updateField("checkbox", e.target.checked)}
             />
             <span className={style.signFormCustomCheckbox}></span>
-            <span className={style.signFormText}>
-              {t('sign.span')}
-            </span>
+            <span className={style.signFormText}>{t("sign.span")}</span>
           </label>
 
           <button
@@ -83,12 +81,15 @@ export const Sign = () => {
             }`} // ксс меняется при валидации
             disabled={!isSubmitActive}
           >
-            {t('button.submit_sign')}
+            {t("button.submit_sign")}
           </button>
 
           <p className={style.signFormFooterText}>
-            {t('sign.p2')}
-            <Link to={ROUTES.SIGN_IN} className={style.signFormLink}> {t('sign.link')}</Link>
+            {t("sign.p2")}
+            <Link to={ROUTES.SIGN_IN} className={style.signFormLink}>
+              {" "}
+              {t("sign.link")}
+            </Link>
           </p>
         </form>
       </div>

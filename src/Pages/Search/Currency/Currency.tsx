@@ -13,7 +13,7 @@ const Currency = () => {
     return (
       <div className="page-container">
         <main className={style.content}>
-          <div>{t('currency.response')}</div>
+          <div>{t("currency.response")}</div>
         </main>
       </div>
     );
@@ -23,9 +23,9 @@ const Currency = () => {
     <div className="page-container">
       <main className={style.content}>
         <section className={style.contentTitle}>
-          <span className={style.codeColumn}>{t('currency.cod')}</span>
-          <span className={style.buyColumn}>{t('currency.pay')}</span>
-          <span className={style.sellColumn}>{t('currency.sell')}</span>
+          <span className={style.codeColumn}>{t("currency.cod")}</span>
+          <span className={style.buyColumn}>{t("currency.pay")}</span>
+          <span className={style.sellColumn}>{t("currency.sell")}</span>
         </section>
 
         <section className={style.currency}>

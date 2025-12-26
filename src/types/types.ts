@@ -5,6 +5,10 @@ export interface DataContent {
   label: string;
   path?: string;
   text?: string;
-  count?: number;
-  type?: string;
+}
+
+export interface DataBalance {
+  id: string;
+  label: string;
+  key: 'USD' | 'EUR' | 'CNY';
 }
