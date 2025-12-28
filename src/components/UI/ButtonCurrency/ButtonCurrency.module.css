@@ -1,0 +1,59 @@
+.buttonContainer {
+  position: relative; /* позиционирование списка */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.formChangeButton {
+  background: var(--text-color-ui); /**/
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  border-left: 1px solid var(--form-text-color);
+  color: var(--form-text-color);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+}
+
+.formChangeButtonImg {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+/* Выпадающий список */
+.dropDown {
+  position: absolute;
+  top: 100%;
+  background: var(--text-color-ui);
+  border: 1px solid var(--form-text-color);
+  border-radius: 8px;
+  z-index: 1;
+  min-width: 70px;
+}
+
+.dropDownItem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--form-text-color);
+  cursor: pointer;
+  color: var(--form-text-color);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-font-size);
+  font-weight: var(--st-font-weight);
+}
+
+.dropDownItem:last-child {
+  border-bottom: none;
+}
+
+.dropDownItem:hover {
+  background: var(--text-color-ui);
+}

@@ -5,6 +5,7 @@ export interface DataContent {
   label: string;
   path?: string;
   text?: string;
+  count?: number;
 }
 
 export interface DataBalance {

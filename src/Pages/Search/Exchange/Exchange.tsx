@@ -1,3 +1,5 @@
+import { ButtonUpCurrency } from "../../../components/UI/ButtonCurrency/ButtonUpCurrency";
+import { ButtonDownCurrency } from "../../../components/UI/ButtonCurrency/ButtonDownCurrency";
 import style from "./Exchange.module.css";
 import { useTranslation } from "react-i18next";
 
@@ -14,6 +16,7 @@ const Exchange = () => {
         />
         <div className={style.contentForm}>
           <form className={style.formChange}>
+
             <div className={style.formChangeMenu}>
               <label className={style.formChangeCurrency}>
                 <input
@@ -24,18 +27,7 @@ const Exchange = () => {
                   step="0.01"
                 />
               </label>
-              <button
-                className={style.formChangeButton}
-                type="button"
-                aria-label="Выбрать валюту"
-              >
-                RUB
-                <img
-                  className={style.formChangeButtonImg}
-                  src="/svg/Icon/01.svg"
-                  alt=""
-                />
-              </button>
+              <ButtonUpCurrency />
             </div>
 
             <img
@@ -54,18 +46,7 @@ const Exchange = () => {
                   step="0.01"
                 />
               </label>
-              <button
-                className={style.formChangeButton}
-                type="button"
-                aria-label="Выбрать валюту"
-              >
-                USD
-                <img
-                  className={style.formChangeButtonImg}
-                  src="/svg/Icon/01.svg"
-                  alt=""
-                />
-              </button>
+              <ButtonDownCurrency />
             </div>
 
             <button className={style.formButton} type="submit">

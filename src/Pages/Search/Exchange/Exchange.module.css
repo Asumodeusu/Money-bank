@@ -60,27 +60,6 @@
   box-sizing: border-box;
 }
 
-.formChangeButton {
-  background: var(--text-color-ui); /**/
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  border-left: 1px solid var(--form-text-color);
-  color: var(--form-text-color);
-  font-family: var(--only-font-family), sans-serif;
-  font-size: var(--st-font-size);
-  font-weight: var(--st-font-weight);
-}
-
-.formChangeButtonImg {
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-}
-
 .formChangeImg {
   width: 60px;
   height: 60px;
