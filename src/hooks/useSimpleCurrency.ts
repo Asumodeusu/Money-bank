@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 export interface CurrencyRate {
   code: string;
   name: string;
-  buy: number; // Покупка
-  sell: number; // Продажа
+  buy: number;
+  sell: number;
 }
 
 export const useSimpleCurrency = () => {

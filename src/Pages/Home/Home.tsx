@@ -8,7 +8,7 @@ import { useBalance } from "../../hooks/useBalance";
 
 export const Home = () => {
   const { handleItemClick } = useHomeNavigation();
-  const [userName, setUserName] = useState("Гость");
+  const [userName, setUserName] = useState("Гость"); // на случай ошибки
   const { t } = useTranslation();
   const { balances } = useBalance();
 

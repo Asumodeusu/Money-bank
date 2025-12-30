@@ -35,7 +35,7 @@ i18n
     
     // Настройки интерполяции
     interpolation: {
-      escapeValue: false // React уже защищает от XSS
+      escapeValue: false // React уже защищает
     }
   });
 

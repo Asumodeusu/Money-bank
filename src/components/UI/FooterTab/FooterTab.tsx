@@ -12,7 +12,7 @@ export const Footer = () => {
     tabs.find((tab) => tab.path === location.pathname)?.id || "";
 
   const handleTabChange = (tabId: string) => {
-    const tab = tabs.find((t) => t.id === tabId);
+    const tab = tabs.find((item) => item.id === tabId);
     // Если у вкладки есть путь - выполняем навигацию
     if (tab?.path) {
       navigate(tab.path);

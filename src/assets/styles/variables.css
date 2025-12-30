@@ -1,11 +1,13 @@
 :root {
   /***********COLOR**************/
 
-  --standart-color: ;
-  --bg-color: ;
-  --form-text-color: ;
-  --text-color: ;
-  --form-input-color: ;
+  --text-color-ui: #fff;
+  --standart-color: #fff;
+  --bg-color: #667eea;
+  --form-text-color: #666;
+  --text-color: #1a1a1a;
+  --form-input-color: #ddd;
+  --box-shadow: rgba(0, 0, 0, 0.3);
 
   /***********SHRIFT**************/
 

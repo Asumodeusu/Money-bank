@@ -17,7 +17,7 @@ const Currency = () => {
         </main>
       </div>
     );
-  }
+  } // загрузка валюты
 
   return (
     <div className="page-container">

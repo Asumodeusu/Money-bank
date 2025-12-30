@@ -20,7 +20,7 @@ const Setting = () => {
       // Если есть path - навигация
       navigateToItem(item);
     }
-  };
+  };// сброс сделать при выходе!
 
   return (
     <div className="page-container">

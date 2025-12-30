@@ -9,7 +9,7 @@ export const useTheme = () => {
       return savedTheme;
     }
 
-    // проверка темы на устройстве
+    // проверка темы на устройстве НЕ ДОДЕЛАНО
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;

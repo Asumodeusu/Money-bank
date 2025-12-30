@@ -10,6 +10,6 @@ export const useBalance = () => {
     throw new Error('useBalance должен использоваться внутри BalanceProvider');
   } // защита от андефаинд - ошибки
 
-  // Возвращаем объект с балансами и функциями:
+  // Возвращаем объект с балансами и функциями
   return context;
 };
