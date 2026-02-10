@@ -7,6 +7,7 @@
   margin: 0 auto;
   width: 100%;
   height: 100%;
+  gap: 20px;
 }
 
 .pageLogo {
@@ -21,4 +22,22 @@
   font-size: var(--welcome-font-size);
   text-align: center;
   color: var(--standart-color);
+}
+
+.planetButton {
+  background: var(--bg-color);
+  color: var(--standart-color);
+  border: 3px solid var(--text-color-ui);
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 16px;
+  width: 50%;
+  transition: all 0.4s ease;
+}
+
+.planetButton:hover {
+  transform: rotate(10deg);
 }

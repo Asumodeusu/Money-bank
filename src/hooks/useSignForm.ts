@@ -26,10 +26,18 @@ export const useSignForm = (formType: FormType = "sign") => {
 
   // Функция для обновления значения конкретного поля
   const updateField = (field: keyof FormFields, value: string | boolean) => {
-    setFields((prev) => ({
-      ...prev, // Копируем все предыдущие значения полей
-      [field]: value, // Обновляем только указанное поле
-    }));
+    setFields((prev) => {
+      // Ограничиваем имя до 8 символов
+      if (field === "user" && typeof value === "string" && value.length > 8) {
+        return prev;
+      }
+
+      if (field === "number" && typeof value === "string" && value.length > 11) {
+        return prev;
+      }
+
+      return { ...prev, [field]: value };
+    });
   };
 
   // функция отправки с сохранением в localStorage

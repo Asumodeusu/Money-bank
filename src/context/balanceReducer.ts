@@ -8,7 +8,6 @@ export const initialState: BalanceState = {
   CNY: 0,
 };
 
-// Принимает текущее состояние и команду (action), возвращает новое состояние
 export function balanceReducer(
   state: BalanceState,
   action: BalanceAction,
@@ -23,30 +22,21 @@ export function balanceReducer(
     case "EXCHANGE": {
       const { fromCurrency, toCurrency, amount, rate } = action.payload;
 
-      // Проверяем, хватает ли денег
       if (state[fromCurrency] < amount) {
         console.warn(`Недостаточно средств в валюте ${fromCurrency}`);
         return state;
       }
 
-      // 🔥 ИСПРАВЛЕННАЯ ЛОГИКА:
       let receivedAmount: number;
 
-      // Случай 1: RUB → иностранная валюта (покупаем)
       if (fromCurrency === "RUB" && toCurrency !== "RUB") {
-        receivedAmount = amount / rate; // ДЕЛИМ
-      }
-      // Случай 2: иностранная валюта → RUB (продаем)
-      else if (fromCurrency !== "RUB" && toCurrency === "RUB") {
-        receivedAmount = amount * rate; // УМНОЖАЕМ
-      }
-      // 🔥 Случай 3: иностранная валюта → другая иностранная
-      // rate уже должен быть КОНЕЧНЫМ курсом между валютами
-      else {
-        receivedAmount = amount * rate; // Используем готовый расчетный курс
+        receivedAmount = amount / rate;
+      } else if (fromCurrency !== "RUB" && toCurrency === "RUB") {
+        receivedAmount = amount * rate;
+      } else {
+        receivedAmount = amount * rate;
       }
 
-      // Округляем
       receivedAmount = parseFloat(receivedAmount.toFixed(2));
 
       return {

@@ -2,58 +2,53 @@
 @import "./theme/light.css";
 @import "./theme/dark.css";
 
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-@media (width <= 768px) {
-  button {
-    outline: none;
-  }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: gray;
+}
 
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--standart-color);
-    outline: none;
-  }
+#root {
+  width: 100%;
+  height: 100%;
+}
 
-  #root {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    background: var(--standart-color);
-  }
+.mobile-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* Автоматическое масштабирование под разные экраны */
-  .mobile-app {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+.mobile-screen {
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 980px;
+  overflow: hidden;
+  background: var(--standart-color);
+  color: var(--text-color);
+}
 
-  /* Все лейауты наследуют размеры */
-  .mobile-layout,
+/* для пк */
+@media (min-width: 769px) {
   .mobile-screen {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    margin: auto;
   }
+}
 
-  /* Гарантируем что все страницы занимают всю высоту */
-  .page-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+.page-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }

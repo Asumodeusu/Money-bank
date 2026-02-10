@@ -7,12 +7,15 @@ export const Welcome = () => {
 
   return (
     <div className="page-container">
-      <div
-        className={style.welcomePage}
-        onClick={() => navigate(ROUTES.SIGN)} // ТАП ПО ВСЕМУ ЭКРАНУ
-      >
+      <div className={style.welcomePage}>
         <img className={style.pageLogo} src="/svg/Logo.svg" alt="Logo" />
         <h1 className={style.pageTitle}>MONEY BANK</h1>
+        <button
+          className={style.planetButton}
+          onClick={() => navigate(ROUTES.SIGN)}
+        >
+          Hello world
+        </button>
       </div>
     </div>
   );

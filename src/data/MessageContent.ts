@@ -6,7 +6,6 @@ export const massageContent: DataContent[] = [
     icon: "/svg/message/5.svg",
     label: "message.label_bank",
     text: "message.text_bank",
-    count: 1,
   },
   // {
   //   id: "account",
