@@ -1,6 +1,6 @@
 # React + Vite
 
-- Ссылка на приложение - money-bank-m.vercel.app (только для телефонов!)
+- Ссылка на приложение - `money-bank-m.vercel.app` (только для телефонов!)
 - Перед запуском необходимо инициализировать проект с использованием React/Vite - npm install
 - Запуск проекта осуществляется командой: `npm run dev`
 
@@ -9,16 +9,17 @@
 - Веб-приложение, разработанное на стеке:
 
 **Frontend:**
+
 - React 18 + TypeScript
 - React Router v6 (навигация)
 - Redux Toolkit (управление состоянием)
+- React-i18next
+- @types/yandex-maps (для работы с YMaps)
 - CSS Modules (стилизация)
 - Vite (сборка проекта)
 
-**Backend (в разработке):**
-- Node.js + Fastify
-
 **Интеграции:**
+
 - Яндекс.Карты API
 - API Центробанка РФ (курсы валют)
 
@@ -29,7 +30,7 @@
 
 Ключевое преимущество: приложение обладает масштабируемостью, что позволяет легко вносить изменения, добавлять улучшения и реализовывать различные функции, используемые в реальных веб-приложениях.
 
-## Структура фронтенд-части приложения
+## Структура приложения
 
 ### Public
 
@@ -158,6 +159,9 @@
 │   │   ├── Currency
 │   │   │   ├── Currency.module.css
 │   │   │   └── Currency.tsx
+│   │   ├── Exchange
+│   │   │   ├── Exchange.module.css
+│   │   │   └── Exchange.tsx
 │   │   ├── Map
 │   │   │   └── Map.tsx
 │   │   ├── Search.module.css
@@ -173,10 +177,29 @@
 │   │   ├── Welcome.module.css
 │   │   └── Welcome.tsx
 │   └── index.ts
+├── assets
+│   ├── fonts
+│   │   ├── IBMPlexMono-Regular.woff
+│   │   ├── Inter-Variable.woff2
+│   │   └── fonts.css
+│   └── styles
+│       ├── global.css
+│       ├── theme
+│       │   ├── dark.css
+│       │   └── light.css
+│       └── variables.css
 ├── components
 │   ├── Map
 │   │   └── Map.tsx
 │   └── UI
+│       ├── ButtonCurrency
+│       │   ├── ButtonCurrency.module.css
+│       │   ├── ButtonCurrency.tsx
+│       │   ├── ButtonDownCurrency.tsx
+│       │   └── ButtonUpCurrency.tsx
+│       ├── ButtonDone
+│       │   ├── ButtonDone.module.css
+│       │   └── ButtonDone.tsx
 │       ├── FooterTab
 │       │   ├── FooterTab.module.css
 │       │   └── FooterTab.tsx
@@ -184,39 +207,46 @@
 │           ├── HeaderBack.module.css
 │           └── HeaderBack.tsx
 ├── constants
+│   ├── currency.ts
 │   ├── layouts.ts
-│   ├── routes.ts
-│   └── theme.ts
+│   ├── lazyApp.ts
+│   └── routes.ts
+├── context
+│   ├── BalanceContext.tsx
+│   ├── BalanceProvider.tsx
+│   └── balanceReducer.ts
 ├── data
 │   ├── HeaderBack.ts
-│   ├── HomeData
-│   │   └── HomeContent.ts
-│   ├── MessageData
-│   │   └── MessageContent.ts
-│   ├── SearchData
-│   │   └── SearchContent.ts
-│   ├── SettingData
-│   │   └── SettingContent.ts
+│   ├── HomeContent.ts
+│   ├── MessageContent.ts
+│   ├── SearchContent.ts
+│   ├── SettingContent.ts
 │   └── footerTab.ts
-├── fonts
 ├── hooks
-│   ├── headerPreset
-│   │   └── useHeaderPreset.tsx
 │   ├── index.ts
-│   ├── useSignForm
-│   │   └── useSignForm.tsx
-│   └── useSimpleCurrency
-│       └── useSimpleCurrency.ts
+│   ├── useBalance.ts
+│   ├── useHeaderPreset.ts
+│   ├── useHomeNavigation.ts
+│   ├── useItemNavigation.ts
+│   ├── useLang.ts
+│   ├── useSignForm.ts
+│   ├── useSimpleCurrency.ts
+│   └── useTheme.ts
+├── i18n
+│   ├── i18n.ts
+│   └── lang
+│       ├── en
+│       │   └── translation.json
+│       └── ru
+│           └── translation.json
 ├── main.tsx
 ├── store
 │   ├── hooks.ts
 │   ├── slices
 │   │   └── headerSlice.ts
 │   └── store.ts
-├── styles
-│   ├── index.css
-│   └── variables.css
 ├── types
+│   ├── balance.ts
 │   └── types.ts
 └── vite-env.d.ts
 ```
