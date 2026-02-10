@@ -23,7 +23,6 @@ const Exchange = () => {
     balances,
     currentRate,
     loading,
-
     // Методы
     executeExchange,
   } = useExchange();

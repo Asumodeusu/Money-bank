@@ -7,34 +7,54 @@ export const useExchange = () => {
   const { balances, exchangeCurrency } = useBalance();
   const { rates, loading } = useSimpleCurrency();
 
-  // УКАЗЫВАЕМ ТИП CurrencyCode!
   const [fromCurrency, setFromCurrency] = useState<CurrencyCode>("RUB");
   const [toCurrency, setToCurrency] = useState<CurrencyCode>("USD");
   const [fromAmount, setFromAmount] = useState("");
   const [toAmount, setToAmount] = useState("0.00");
   const [error, setError] = useState("");
 
-  // Расчет курса
+  const calculateCrossRate = (
+    from: CurrencyCode,
+    to: CurrencyCode,
+  ): number | null => {
+    if (!rates || rates.length === 0) return null;
+
+    const fromRate = rates.find((rate) => rate.code === from);
+    const toRate = rates.find((rate) => rate.code === to);
+
+    if (!fromRate || !toRate) return null;
+
+    return fromRate.sell / toRate.buy;
+  };
+
   const currentRate = useMemo(() => {
-    if (!rates?.length) return null;
-    const rateInfo = rates.find((rate) => rate.code === toCurrency);
-    if (!rateInfo) return null;
+    if (!rates || rates.length === 0) return null;
 
     if (fromCurrency === "RUB" && toCurrency !== "RUB") {
-      return rateInfo.buy;
+      const rateInfo = rates.find((rate) => rate.code === toCurrency);
+      return rateInfo?.buy || null;
     } else if (fromCurrency !== "RUB" && toCurrency === "RUB") {
-      return rateInfo.sell;
+      const rateInfo = rates.find((rate) => rate.code === fromCurrency);
+      return rateInfo?.sell || null;
+    } else {
+      return calculateCrossRate(fromCurrency, toCurrency);
     }
-    return null;
   }, [rates, fromCurrency, toCurrency]);
 
-  // Авторасчет суммы
   useEffect(() => {
     if (fromAmount && currentRate) {
       const amount = parseFloat(fromAmount);
       if (amount > 0) {
-        let result =
-          fromCurrency === "RUB" ? amount / currentRate : amount * currentRate;
+        let result = 0;
+
+        if (fromCurrency === "RUB" && toCurrency !== "RUB") {
+          result = amount / currentRate;
+        } else if (fromCurrency !== "RUB" && toCurrency === "RUB") {
+          result = amount * currentRate;
+        } else {
+          result = amount * currentRate;
+        }
+
         setToAmount(result.toFixed(2));
         setError("");
       } else {
@@ -45,7 +65,7 @@ export const useExchange = () => {
     }
   }, [fromAmount, fromCurrency, toCurrency, currentRate]);
 
-  // Проверка
+  // ПРОВЕРКА
   const validate = () => {
     const amount = parseFloat(fromAmount);
 
@@ -54,36 +74,47 @@ export const useExchange = () => {
       return false;
     }
 
-    if (!currentRate) {
-      setError("Курс недоступен");
+    if (fromCurrency === toCurrency) {
+      setError("Нельзя обменять валюту на саму себя");
       return false;
     }
 
-    // ПРИВОДИМ К CurrencyCode для TypeScript!
-    if (amount > balances[fromCurrency as CurrencyCode]) {
-      setError(`Недостаточно ${fromCurrency}`);
+    if (amount > balances[fromCurrency]) {
+      setError(
+        `Недостаточно ${fromCurrency}. Доступно: ${balances[fromCurrency].toFixed(2)}`,
+      );
       return false;
     }
 
     return true;
   };
 
-  // Обмен
   const executeExchange = () => {
     if (!validate() || !currentRate) return false;
 
     const amount = parseFloat(fromAmount);
 
-    // СОЗДАЕМ ОБЪЕКТ С ПРАВИЛЬНЫМИ ТИПАМИ
     exchangeCurrency({
-      fromCurrency: fromCurrency as CurrencyCode, // Приводим тип
-      toCurrency: toCurrency as CurrencyCode, // Приводим тип
+      fromCurrency,
+      toCurrency,
       amount,
       rate: currentRate,
     });
 
     return true;
   };
+
+  const allCurrencies: CurrencyCode[] = ["RUB", "USD", "EUR", "CNY"];
+
+  // Валюты для выбора в поле "из" (исключаем текущую целевую)
+  const availableFromCurrencies = allCurrencies.filter(
+    (curr) => curr !== toCurrency,
+  );
+
+  // Валюты для выбора в поле "в" (исключаем текущую исходную)
+  const availableToCurrencies = allCurrencies.filter(
+    (curr) => curr !== fromCurrency,
+  );
 
   return {
     // Состояние
@@ -100,6 +131,8 @@ export const useExchange = () => {
     balances,
     currentRate,
     loading,
+    availableFromCurrencies,
+    availableToCurrencies,
 
     // Методы
     executeExchange,

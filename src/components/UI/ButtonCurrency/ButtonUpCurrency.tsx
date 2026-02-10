@@ -11,7 +11,7 @@ export const ButtonUpCurrency = ({
   onCurrencyChange,
 }: ButtonUpCurrencyProps) => {
   const [showUpList, setShowUpList] = useState(false);
-  const currency = ["RUB"];
+  const currency = ["RUB", "USD", "EUR", "CNY"];
 
   const handleSelect = (item: string) => {
     onCurrencyChange(item); // Вызываем функцию родителя
