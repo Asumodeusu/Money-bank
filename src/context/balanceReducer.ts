@@ -29,13 +29,11 @@ export function balanceReducer(
       if (state[fromCurrency] < amount) {
         console.warn(`Недостаточно средств в валюте ${fromCurrency}`);
 
-        // так сделать ! setError(`Недостаточно средств в валюте ${fromCurrency}`);
-
         return state; // Если не хватает — возвращаем старое состояние без изменений
       }
 
       // Рассчет обмена
-      const receivedAmount = amount * rate;
+      const receivedAmount = amount / rate;
 
       // обновление баланса
       return {
