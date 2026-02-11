@@ -56,6 +56,3 @@
 ![Обмен](/public/PictureDeploy/7.jpeg)
 ![Главная страница](/public/PictureDeploy/8.jpeg)
 ![Настройки](/public/PictureDeploy/9.jpeg)
-
-![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?logo=typescript)
