@@ -23,7 +23,7 @@ export function balanceReducer(
       const { fromCurrency, toCurrency, amount, rate } = action.payload;
 
       if (state[fromCurrency] < amount) {
-        console.warn(`Недостаточно средств в валюте ${fromCurrency}`);
+        // console.warn(`Недостаточно средств в валюте ${fromCurrency}`);
         return state;
       }
 
