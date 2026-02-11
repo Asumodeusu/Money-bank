@@ -83,14 +83,18 @@
 
 /* Информация о балансе */
 .balanceInfo {
-  font-size: 12px;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-small-size);
+  font-weight: var(--st-font-weight);
   color: var(--form-text-color);
   padding-left: 5px;
 }
 
 /* Информация о курсе */
 .rateInfo {
-  font-size: 12px;
+  font-family: var(--only-font-family), sans-serif;
+  font-size: var(--st-small-size);
+  font-weight: var(--st-font-weight);
   color: var(--form-text-color);
   padding-left: 5px;
 }

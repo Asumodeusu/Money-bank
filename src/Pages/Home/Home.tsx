@@ -40,7 +40,7 @@ export const Home = () => {
         </header>
 
         <section className={style.contentCard}>
-          <img className={style.card} src="/svg/card/blue.svg" alt="карты" />
+          <img className={style.card} src="/svg/card/Multi.svg" alt="карты" />
 
           <div className={style.cardInfo}>
             <span className={style.info}>{userName}</span>
