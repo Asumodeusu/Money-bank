@@ -1,4 +1,12 @@
 # Money Bank - Мобильное банковское приложение
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![TS](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?logo=react-router&logoColor=white)
+![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-764ABC?logo=redux&logoColor=white)
+![i18next](https://img.shields.io/badge/i18next-26A69A?logo=i18next&logoColor=white)
+![Yandex](https://img.shields.io/badge/Yandex_Maps-FC3F1D?logo=yandex&logoColor=white)
+![CSS Modules](https://img.shields.io/badge/CSS_Modules-000000?logo=css-modules&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
 
 ## Быстрый старт
 
