@@ -14,7 +14,7 @@ export const Welcome = () => {
           className={style.planetButton}
           onClick={() => navigate(ROUTES.SIGN)}
         >
-          Hello world
+          Click me
         </button>
       </div>
     </div>
