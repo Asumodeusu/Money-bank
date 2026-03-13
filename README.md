@@ -55,7 +55,6 @@
 
 ## Скрины приложения:
 
-![Первая страница](/public/PictureDeploy/1.jpeg)
 ![Форма](/public/PictureDeploy/2.jpeg)
 ![Темная тема](/public/PictureDeploy/3.jpeg)
 ![ENG](/public/PictureDeploy/4.jpeg)
