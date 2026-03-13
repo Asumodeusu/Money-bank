@@ -10,7 +10,7 @@
 
 ## Быстрый старт
 
-- Ссылка на приложение - `money-bank-m.vercel.app`
+- Ссылка на приложение - [`money-bank-m.vercel.app`](https://money-bank-m.vercel.app/)
 - Перед запуском необходимо инициализировать проект с использованием React/Vite - `npm install`
 - Запуск проекта осуществляется командой: `npm run dev`
 
